@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>ZOIA | Asesores de Seguros en Norberto de la Riestra · Agro, hogar y auto</title>
   <meta name="description" content="Seguros agrícolas, hogar, auto y comercio en Norberto de la Riestra y 25 de Mayo. Cotizá por WhatsApp al instante con Rosa Zoia, productora asesora matriculada.">
-  <meta name="theme-color" content="#012c36">
+  <meta name="theme-color" content="#f2f7f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#012e38" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:title" content="ZOIA | Asesores de Seguros">
   <meta property="og:description" content="Cotización al instante, póliza en el día y 100% digital. Agro, hogar, auto, comercio y transporte en Norberto de la Riestra.">
@@ -25,8 +26,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/styles.css">
 
@@ -50,406 +50,341 @@
   </script>
 </head>
 <body>
+  <!-- Íconos (trazo, del diseño) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.7A8.4 8.4 0 1 1 21 11.5z"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-brote" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12C12 8 9 5 4 5c0 4 3 7 8 7z"/><path d="M12 14c0-4 3-7 8-7 0 4-3 7-8 7z"/></symbol>
+    <symbol id="i-etiqueta" viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+    <symbol id="i-semilla" viewBox="0 0 24 24"><path d="M12 3c4 3 5 7 4 11-1 3-3 5-4 7-1-2-3-4-4-7-1-4 0-8 4-11z"/></symbol>
+    <symbol id="i-lluvia" viewBox="0 0 24 24"><path d="M7 15a4 4 0 1 1 .9-7.9A6 6 0 0 1 19 9a3.5 3.5 0 0 1-1 6z"/><path d="M8 19v.01"/><path d="M12 19v.01"/><path d="M16 19v.01"/><path d="M10 22v.01"/><path d="M14 22v.01"/></symbol>
+    <symbol id="i-espiga" viewBox="0 0 24 24"><path d="M12 22V9"/><path d="M12 9c-2-1-3-3-3-5 2 0 3 1 3 3 0-2 1-3 3-3 0 2-1 4-3 5z"/><path d="M12 14c-2-1-3-3-3-4.5"/><path d="M12 14c2-1 3-3 3-4.5"/><path d="M12 19c-2-1-3-3-3-4.5"/><path d="M12 19c2-1 3-3 3-4.5"/></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-escudo-ok" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-capas" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></symbol>
+    <symbol id="i-rayo" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></symbol>
+    <symbol id="i-casa" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9v12h14V9"/><path d="M10 21v-6h4v6"/></symbol>
+    <symbol id="i-auto" viewBox="0 0 24 24"><path d="M5 17h14"/><path d="M3 17v-4l2-5a2 2 0 0 1 1.9-1.4h10.2A2 2 0 0 1 19 8l2 5v4"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></symbol>
+    <symbol id="i-local" viewBox="0 0 24 24"><path d="M3 9 4.5 4h15L21 9"/><path d="M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0z"/><path d="M5 13v8h14v-8"/></symbol>
+    <symbol id="i-camion" viewBox="0 0 24 24"><path d="M2 6h12v10H2z"/><path d="M14 10h4l4 4v2h-8"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></symbol>
+    <symbol id="i-corazon" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+    <symbol id="i-mas" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
+    <symbol id="i-repetir" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/></symbol>
+  </svg>
+
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- 0 · Barra superior -->
-  <header class="nav" data-state="clear">
-    <div class="container nav__inner">
+  <div class="page">
+    <header class="nav" data-scrolled="false">
       <a href="#top" aria-label="ZOIA, asesores de seguros. Ir al inicio">
-        <svg class="logo" viewBox="0 0 1087 409" role="img" aria-hidden="true">
-          <polygon class="shape lz" points="0,0 280,0 195,148 280,148 280,280 0,280 85,131 0,131"/>
-          <circle class="shape lo" cx="452" cy="140" r="140"/>
-          <rect class="shape li" x="614" y="0" width="131" height="280"/>
-          <polygon class="shape la" points="765,280 925,0 1087,280"/>
-          <text class="lt" x="0" y="386" font-family="Montserrat, sans-serif" font-weight="500" font-size="100" textLength="1087" lengthAdjust="spacingAndGlyphs">asesores de seguros</text>
+        <svg class="logo" viewBox="0 0 1087 409" aria-hidden="true">
+          <polygon class="forma z" points="0,0 280,0 195,148 280,148 280,280 0,280 85,131 0,131"/>
+          <circle class="forma o" cx="452" cy="140" r="140"/>
+          <rect class="forma i" x="614" y="0" width="131" height="280"/>
+          <polygon class="forma a" points="765,280 925,0 1087,280"/>
+          <text class="t" x="0" y="386" font-family="Montserrat, sans-serif" font-weight="500" font-size="100" textLength="1087" lengthAdjust="spacingAndGlyphs">asesores de seguros</text>
         </svg>
       </a>
       <nav class="nav__links" aria-label="Secciones">
-        <a href="#agro">Seguro agrícola</a>
+        <a href="#campana">Seguro agrícola</a>
         <a href="#coberturas">Coberturas</a>
         <a href="#rosa">Quién te asesora</a>
         <a href="#preguntas">Preguntas</a>
       </nav>
-      <a class="btn btn--sm btn--whatsapp" data-wa="general" data-track="barra" href="https://wa.me/5492345478090">
-        <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Escribinos
+      <a class="nav__movil" href="#preguntas">Preguntas</a>
+      <a class="btn btn--chico" data-wa="general" data-track="barra" href="https://wa.me/5492345478090">
+        <svg class="i-wa" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar
       </a>
-    </div>
-  </header>
+    </header>
 
-  <main id="contenido">
-    <span id="top"></span>
+    <main id="contenido">
+      <span id="top"></span>
 
-    <!-- 1 · Hero agro (entrada desde el QR de la lona) -->
-    <section class="hero hero--agro only-agro" aria-labelledby="hero-agro-title">
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <span class="t-label hero__eyebrow" data-hero-fade>Seguros agrícolas</span>
-          <h1 id="hero-agro-title" class="t-display hero__title split">Tu campaña, <span class="hl">protegida</span> desde que nace</h1>
-          <p class="t-lead hero__lead" data-hero-fade>Cobertura desde la emergencia del cultivo, fina y gruesa en una sola póliza. Te cotizamos por WhatsApp, sin vueltas.</p>
-          <div class="hero__actions" data-hero-fade>
-            <a class="btn btn--whatsapp" data-wa="agro" data-track="hero-agro" href="https://wa.me/5492345478090">
-              <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Cotizá tu seguro agrícola
-            </a>
-          </div>
-          <p class="hero__note" data-hero-fade>
-            <i class="ti ti-user-heart" aria-hidden="true"></i>
-            Te responde Rosa, tu asesora. Trabajamos con las compañías más sólidas del país.
-          </p>
-        </div>
-        <div class="hero-photo">
-          <span class="hero-photo__curve" aria-hidden="true"></span>
-          <div class="hero-photo__frame">
-            <img src="assets/img/agro-siembra.jpg" width="1080" height="1350" alt="Lote recién nacido, con las plantas emergiendo en hileras" fetchpriority="high">
-          </div>
-          <span class="hero-photo__tri" aria-hidden="true"></span>
-          <span class="hero-photo__dot" aria-hidden="true"></span>
-        </div>
-      </div>
-    </section>
-
-    <!-- 1B · Hero general (entrada desde Instagram y Google) -->
-    <section class="hero hero--general only-general" aria-labelledby="hero-general-title">
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <span class="t-label hero__eyebrow" data-hero-fade>ZOIA | Asesores de seguros</span>
-          <h1 id="hero-general-title" class="t-display hero__title split">Tener un seguro no es lo mismo que estar realmente <span class="hl">protegido</span></h1>
-          <p class="t-lead hero__lead" data-hero-fade>Cotización al instante, póliza en el día y 100% digital. Para tu casa, tu auto, tu negocio y tu campo.</p>
-          <div class="hero__actions" data-hero-fade>
-            <a class="btn btn--whatsapp" data-wa="general" data-track="hero-general" href="https://wa.me/5492345478090">
-              <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Cotizá por WhatsApp
-            </a>
-            <a class="btn btn--ghost" href="#coberturas">Ver coberturas</a>
+      <!-- Hero bento -->
+      <section class="hero" aria-label="Presentación">
+        <div class="tile hero__main">
+          <img src="assets/img/agro-siembra.jpg" width="1080" height="1350" alt="Surcos con plantas recién nacidas en un lote" fetchpriority="high">
+          <div class="velo"></div>
+          <div class="hero__text">
+            <h1 class="split only-agro">Tu campaña, <span class="clave">protegida</span> desde que nace</h1>
+            <h1 class="split only-general">Tener un seguro no es lo mismo que estar realmente <span class="clave">protegido</span></h1>
+            <p class="only-agro" data-fade>Seguro agrícola desde la emergencia del cultivo, con fina y gruesa en una sola póliza. Te cotizamos por WhatsApp, sin vueltas.</p>
+            <p class="only-general" data-fade>Cotización al instante, póliza en el día y 100% digital. Para tu casa, tu auto, tu negocio y tu campo.</p>
+            <div class="hero__ctas" data-fade>
+              <a class="btn btn--acento only-agro" data-wa="agro" data-track="hero-agro" href="https://wa.me/5492345478090">
+                <svg class="i-wa" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp
+              </a>
+              <a class="btn btn--acento only-general" data-wa="general" data-track="hero-general" href="https://wa.me/5492345478090">
+                <svg class="i-wa" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp
+              </a>
+              <a class="btn btn--contorno" href="#campana">Ver qué cubre</a>
+            </div>
           </div>
         </div>
-        <div class="hero-mosaic" aria-hidden="true">
-          <div class="mosaic-z"></div>
-          <div class="mosaic-o"><img src="assets/img/hogar-familia.jpg" width="911" height="911" alt=""></div>
-          <div class="mosaic-i"><img src="assets/img/agro-siembra.jpg" width="1080" height="1350" alt=""></div>
-          <div class="mosaic-a"></div>
+        <div class="tile hero__menta">
+          <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-brote"/></svg>
+          <div>
+            <h3>Cubierto desde la emergencia</h3>
+            <p>No desde que el cultivo ya vale: desde que nacen las plantas.</p>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- 2 · Beneficios del seguro agrícola -->
-    <section class="section" id="agro" aria-labelledby="agro-title">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 id="agro-title" class="t-h2">Una póliza pensada para toda tu <span class="hl">campaña</span></h2>
+        <div class="tile hero__foto"><img src="assets/img/agro-cosecha.jpg" width="1080" height="1350" alt="Cosechadoras trabajando un lote, vista aérea"></div>
+        <div class="tile hero__rosa">
+          <span class="burbuja" aria-hidden="true"></span>
+          <img class="avatar" src="assets/img/rosa-avatar.jpg" width="320" height="320" alt="María Rosa Zoia, asesora de seguros">
+          <div>
+            <p>Te responde Rosa, tu asesora. Comparamos entre varias compañías y te lo explicamos sin vueltas.</p>
+            <a class="link-flecha" data-wa="rosa" data-track="hero-rosa" href="https://wa.me/5492345478090">Escribile a Rosa
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+          </div>
         </div>
+      </section>
 
-        <div class="bento" data-stagger>
-          <article class="tile tile--photo">
-            <img src="assets/img/agro-tormenta.jpg" width="1080" height="1350" alt="" loading="lazy">
-            <span class="tile__icon" aria-hidden="true"><i class="ti ti-seeding"></i></span>
-            <h3 class="t-h3">Cobertura desde emergencia</h3>
-            <p>Estás protegido desde el nacimiento de las plantas, no desde que el cultivo ya vale.</p>
-          </article>
-          <article class="tile tile--mint">
-            <span class="tile__icon" aria-hidden="true"><i class="ti ti-recycle"></i></span>
-            <h3 class="t-h3">Resiembra</h3>
-            <p>Si un evento cubierto te obliga a volver a sembrar, la póliza te ayuda a cubrir ese costo.</p>
-          </article>
-          <article class="tile tile--brand">
-            <span class="tile__icon" aria-hidden="true"><i class="ti ti-calendar-repeat"></i></span>
-            <h3 class="t-h3">Ciclo completo</h3>
-            <p>Tu cosecha fina y gruesa en una sola póliza: un solo trámite, un solo contacto.</p>
-          </article>
-          <article class="tile tile--yellow tile--wide">
-            <span class="tile__corner" aria-hidden="true"></span>
-            <span class="tile__icon" aria-hidden="true"><i class="ti ti-discount"></i></span>
-            <h3 class="t-h3">Descuentos</h3>
-            <p>Beneficios por contratación temprana: cuanto antes asegurás, mejor.</p>
-          </article>
+      <!-- Campaña: línea de tiempo + ciclo completo -->
+      <section class="franja" id="campana" aria-labelledby="campana-title">
+        <div class="panel">
+          <div class="head" data-reveal>
+            <h2 id="campana-title" class="h2">Una póliza que acompaña toda tu campaña</h2>
+            <p class="bajada">De la siembra a la cosecha, así funciona tu cobertura.</p>
+          </div>
+          <div class="campana">
+            <div class="linea-tiempo" data-reveal>
+              <div class="lt">
+                <div class="lt__arco" aria-hidden="true">
+                  <svg viewBox="0 0 100 64" preserveAspectRatio="none"><path d="M70 64 C70 10 30 10 30 64" fill="none" stroke-width="2" stroke-dasharray="6 6" vector-effect="non-scaling-stroke"/></svg>
+                  <span class="lt__punta"></span>
+                  <span class="chip"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-repetir"/></svg>Resiembra si un evento cubierto lo exige</span>
+                </div>
+                <ol class="lt__etapas">
+                  <li class="etapa" style="--i:0">
+                    <span class="nodo nodo--amarillo"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-etiqueta"/></svg></span>
+                    <div><b>Contratás</b><span class="etapa__txt">Antes de sembrar tenés descuento</span></div>
+                  </li>
+                  <li class="etapa" style="--i:1">
+                    <span class="nodo nodo--gris"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-semilla"/></svg></span>
+                    <div><b>Siembra</b><span class="etapa__txt">Fina o gruesa</span></div>
+                  </li>
+                  <li class="etapa" style="--i:2">
+                    <span class="nodo nodo--oscuro"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-brote"/></svg></span>
+                    <div><b>Emergencia</b><span class="etapa__txt">Nacen las plantas y arranca tu cobertura</span></div>
+                  </li>
+                  <li class="etapa" style="--i:3">
+                    <span class="nodo"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-lluvia"/></svg></span>
+                    <div><b>Desarrollo</b><span class="etapa__txt">Granizo, viento, lluvia o incendio</span>
+                      <span class="etapa__resiembra"><b>Resiembra:</b> si un evento cubierto te obliga a volver a sembrar, la póliza te ayuda.</span></div>
+                  </li>
+                  <li class="etapa" style="--i:4">
+                    <span class="nodo"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-espiga"/></svg></span>
+                    <div><b>Cosecha</b><span class="etapa__txt">Cubierto hasta levantar el cultivo</span></div>
+                  </li>
+                </ol>
+                <span class="lt__gris" aria-hidden="true"></span>
+                <span class="lt__cubierto" aria-hidden="true"></span>
+                <div class="lt__pie">
+                  <span class="chip"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-escudo"/></svg>Estás cubierto</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ciclo" data-reveal style="--i:1">
+              <div class="dona">
+                <svg width="200" height="200" viewBox="0 0 200 200" aria-hidden="true">
+                  <circle class="fina" cx="100" cy="100" r="80" fill="none" stroke="#c7f1df" stroke-width="26" stroke-dasharray="245 503"/>
+                  <circle class="gruesa" cx="100" cy="100" r="80" fill="none" stroke="#eade83" stroke-width="26" stroke-dasharray="245 503" stroke-dashoffset="-251"/>
+                </svg>
+                <div class="dona__centro"><b>1</b><span>sola póliza</span></div>
+              </div>
+              <div>
+                <h3>Ciclo completo</h3>
+                <p>Tu fina y tu gruesa, en el mismo seguro y con un solo contacto.</p>
+              </div>
+              <div class="leyenda">
+                <span><span class="punto" style="background:#c7f1df"></span>Fina: trigo, cebada</span>
+                <span><span class="punto" style="background:#eade83"></span>Gruesa: soja, maíz, girasol</span>
+              </div>
+            </div>
+          </div>
+          <p class="nota">Coberturas sujetas a las condiciones de la póliza y de la compañía aseguradora.</p>
         </div>
+      </section>
 
-        <div class="bento-foot" data-reveal>
-          <p>Granizo, viento, exceso de lluvia, incendio: armamos la cobertura a la medida de tus lotes.</p>
-          <a class="btn btn--dark" data-wa="agro" data-track="beneficios-agro" href="https://wa.me/5492345478090">
-            Quiero cotizar mis lotes<i class="ti ti-arrow-right" aria-hidden="true"></i>
+      <!-- Cómo cotizar -->
+      <section class="cotizar" aria-labelledby="cotizar-title">
+        <img class="cotizar__foto" data-reveal src="assets/img/agro-tormenta.jpg" width="1080" height="1350" alt="Nube de tormenta sobre un lote de soja" loading="lazy">
+        <div class="cotizar__texto">
+          <h2 id="cotizar-title" class="h2" data-reveal>Cotizar te lleva un mensaje</h2>
+          <div class="pasos">
+            <span class="pasos__linea" aria-hidden="true"></span>
+            <div class="paso" style="--i:0">
+              <span class="paso__icono" style="background:#c7f1df;color:#024b5c"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wa"/></svg></span>
+              <div><b>Escribís</b><span>Contanos qué sembraste, cuántas hectáreas y dónde.</span></div>
+            </div>
+            <div class="paso" style="--i:1">
+              <span class="paso__icono" style="background:#024b5c;color:#c7f1df"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-capas"/></svg></span>
+              <div><b>Comparamos</b><span>Opciones de varias compañías, explicadas en criollo.</span></div>
+            </div>
+            <div class="paso" style="--i:2">
+              <span class="paso__icono" style="background:#eade83;color:#024b5c"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-escudo-ok"/></svg></span>
+              <div><b>Quedás cubierto</b><span>Póliza 100% digital y acompañamiento si pasa algo.</span></div>
+            </div>
+          </div>
+          <a class="btn" data-reveal data-wa="agro" data-track="como-cotizar" href="https://wa.me/5492345478090">
+            <svg class="i-wa" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp
           </a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 3 · Cómo funciona -->
-    <section class="section how" id="como-funciona" aria-labelledby="how-title">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 id="how-title" class="t-h2">Asegurar tu campo, en 3 pasos</h2>
-        </div>
-        <div class="steps" role="list">
-          <span class="steps__track" aria-hidden="true"></span>
-          <div role="listitem" class="step" style="--i:0" data-reveal>
-            <span class="step__num" aria-hidden="true">1</span>
-            <div>
-              <h3 class="t-h3">Escribinos por WhatsApp</h3>
-              <p class="t-body">Contanos qué sembraste, cuántas hectáreas y dónde.</p>
-            </div>
-          </div>
-          <div role="listitem" class="step" style="--i:1" data-reveal>
-            <span class="step__num" aria-hidden="true">2</span>
-            <div>
-              <h3 class="t-h3">Recibí tu cotización</h3>
-              <p class="t-body">Comparamos entre varias compañías y te explicamos qué cubre cada opción, en criollo.</p>
-            </div>
-          </div>
-          <div role="listitem" class="step" style="--i:2" data-reveal>
-            <span class="step__num" aria-hidden="true">3</span>
-            <div>
-              <h3 class="t-h3">Listo, estás cubierto</h3>
-              <p class="t-body">Gestionamos la póliza 100% digital y te acompañamos si pasa algo.</p>
-            </div>
+      <!-- Rosa + por qué ZOIA -->
+      <section class="porque" id="rosa" aria-labelledby="rosa-title" data-stagger>
+        <div class="tile rosa">
+          <span class="rosa__tri" aria-hidden="true"></span>
+          <img class="rosa__foto" src="assets/img/rosa-oficina.jpg" width="900" height="1200" alt="María Rosa Zoia en su oficina" loading="lazy">
+          <div class="rosa__texto">
+            <h2 id="rosa-title" class="h2">No sos un número</h2>
+            <p>Soy María Rosa Zoia, Productora Asesora de Seguros matriculada y especializada en agro. Atención 100% personalizada, con un lenguaje claro y el respaldo de las compañías más sólidas. Me escribís a mí, y te respondo yo.</p>
+            <a class="btn" data-wa="rosa" data-track="rosa" href="https://wa.me/5492345478090">Escribile a Rosa</a>
           </div>
         </div>
-        <div class="steps-cta" data-reveal>
-          <a class="btn btn--whatsapp" data-wa="agro" data-track="como-funciona" href="https://wa.me/5492345478090">
-            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Empezar ahora
+        <div class="tile razon razon--oscura">
+          <svg width="28" height="28" fill="none" stroke="#eade83" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-rayo"/></svg>
+          <div><h3>Al instante</h3><p>Cotización en minutos y póliza en el día.</p></div>
+        </div>
+        <div class="tile razon razon--blanca">
+          <svg width="28" height="28" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-doc"/></svg>
+          <div><h3>Cero burocracia</h3><p>Nosotros hacemos los trámites; vos seguís con lo tuyo.</p></div>
+        </div>
+        <div class="tile razon razon--blanca">
+          <svg width="28" height="28" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-capas"/></svg>
+          <div><h3>Varias compañías</h3><p>Comparamos por vos y elegimos lo que mejor te cubre.</p></div>
+        </div>
+        <div class="tile razon razon--amarilla">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wa"/></svg>
+          <div><h3>Siempre a un mensaje</h3><p>WhatsApp 24/7 y oficina en Riestra.</p></div>
+        </div>
+      </section>
+
+      <!-- Coberturas -->
+      <section class="coberturas" id="coberturas" aria-labelledby="cob-title">
+        <div class="coberturas__head">
+          <div class="head" data-reveal>
+            <h2 id="cob-title" class="h2">Además del campo, cuidamos todo lo que te importa</h2>
+            <p class="bajada">Si asegurás más de un bien con nosotros, sumás beneficios como cliente integral.</p>
+          </div>
+          <div class="venn" role="img" aria-label="Campo, hogar y auto juntos suman beneficios de cliente integral">
+            <span class="venn__c venn__c--campo">Campo</span>
+            <span class="venn__c venn__c--hogar">Hogar</span>
+            <span class="venn__c venn__c--auto">Auto</span>
+            <span class="chip venn__chip">Más beneficios</span>
+          </div>
+        </div>
+        <div class="cob-grid" data-stagger>
+          <a class="cob cob--blanca" data-wa="hogar" data-track="linea-hogar" href="https://wa.me/5492345478090">
+            <svg width="28" height="28" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-casa"/></svg>
+            <span class="cob__txt"><b>Hogar</b><span>Combinado Familiar con asistencia 24/7 en cerrajería, plomería, gas y electricidad.</span><span class="cob__cta">Cotizar hogar<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-flecha"/></svg></span></span>
           </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4 · Quién te asesora -->
-    <section class="section on-brand" id="rosa" aria-labelledby="rosa-title">
-      <div class="container rosa__grid">
-        <div class="rosa__visual" data-reveal="scale">
-          <span class="rosa__bar parallax-slow" aria-hidden="true"></span>
-          <div class="rosa__portrait">
-            <!-- TODO: reemplazar por la foto real de Rosa (oficina o campo, sin el cartel viejo "Zoia Seguros"). Cuadrada, mínimo 900x900. -->
-            <img src="assets/img/agro-atardecer.jpg" width="1080" height="1350" alt="Campo de trigo al atardecer en la zona de Norberto de la Riestra" loading="lazy">
-          </div>
-          <span class="rosa__quarter parallax-slow" aria-hidden="true"></span>
-        </div>
-        <div>
-          <h2 id="rosa-title" class="t-h2 rosa__title" data-reveal>No sos un <span class="hl">número</span></h2>
-          <p class="rosa__text" data-reveal>
-            Soy <strong>María Rosa Zoia</strong>, Productora Asesora de Seguros matriculada. Como amante del campo, me especialicé en seguros agropecuarios. Mi objetivo es simple: una atención 100% personalizada, con un lenguaje claro, sin vueltas, y con el respaldo de las compañías más sólidas del mercado. <strong>Me escribís a mí, y te respondo yo.</strong>
-          </p>
-          <div class="rosa__sign" data-reveal>
-            <svg class="rosa__mark" viewBox="0 0 1087 280" aria-hidden="true">
-              <polygon fill="#eade83" points="0,0 280,0 195,148 280,148 280,280 0,280 85,131 0,131"/>
-              <circle fill="#c7f1df" cx="452" cy="140" r="140"/>
-              <rect fill="#eade83" x="614" y="0" width="131" height="280"/>
-              <polygon fill="#eade83" points="765,280 925,0 1087,280"/>
-            </svg>
-            <div>
-              <b>Rosa Zoia</b>
-              <!-- TODO legal: completar el número de matrícula SSN -->
-              <span>Productora Asesora de Seguros · Mat. SSN N.º [pendiente]</span>
-            </div>
-          </div>
-          <div data-reveal>
-            <a class="btn" data-wa="rosa" data-track="rosa" href="https://wa.me/5492345478090">
-              <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Hablar con Rosa
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5 · Por qué ZOIA -->
-    <section class="section" id="por-que" aria-labelledby="why-title">
-      <div class="container why__layout">
-        <div class="section-head" data-reveal>
-          <h2 id="why-title" class="t-h2">Tu tranquilidad, en tiempo <span class="hl">récord</span></h2>
-          <p class="t-lead">Cuatro razones por las que familias, comercios y productores de la zona nos eligen.</p>
-        </div>
-        <div class="why__grid" data-stagger>
-          <div class="why__item">
-            <span class="why__shape why__shape--circle" aria-hidden="true"><i class="ti ti-bolt"></i></span>
-            <div>
-              <h3 class="t-h3">Al instante</h3>
-              <p>Cotización en minutos y póliza emitida en el día.</p>
-            </div>
-          </div>
-          <div class="why__item">
-            <span class="why__shape why__shape--quarter" aria-hidden="true"><i class="ti ti-file-check"></i></span>
-            <div>
-              <h3 class="t-h3">Cero burocracia</h3>
-              <p>Nosotros hacemos los trámites; vos seguís con lo tuyo.</p>
-            </div>
-          </div>
-          <div class="why__item">
-            <span class="why__shape why__shape--square" aria-hidden="true"><i class="ti ti-stack-2"></i></span>
-            <div>
-              <h3 class="t-h3">Varias compañías, un solo lugar</h3>
-              <p>Comparamos por vos y elegimos lo que mejor te cubre.</p>
-            </div>
-          </div>
-          <div class="why__item">
-            <span class="why__shape why__shape--tri" aria-hidden="true"><i class="ti ti-message-circle"></i></span>
-            <div>
-              <h3 class="t-h3">Siempre a un mensaje</h3>
-              <p>Atención por WhatsApp 24/7 y oficina en Riestra.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6 · Todo lo que asegurás con ZOIA -->
-    <section class="section lines" id="coberturas" aria-labelledby="lines-title">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <h2 id="lines-title" class="t-h2">Además del campo, cuidamos todo lo que te <span class="hl">importa</span></h2>
-          <p class="t-lead">Si asegurás más de un bien con nosotros, accedés a beneficios como cliente integral.</p>
-        </div>
-        <div class="lines__grid" data-stagger>
-          <a class="line-card line-card--photo line-card--tall" data-wa="maquinaria" data-track="linea-maquinaria" href="https://wa.me/5492345478090">
+          <a class="cob cob--menta" data-wa="auto" data-track="linea-auto" href="https://wa.me/5492345478090">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-auto"/></svg>
+            <span class="cob__txt"><b>Auto y moto</b><span>Todo Riesgo o Terceros Completo, para circular tranquilo.</span><span class="cob__cta">Cotizar auto o moto<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-flecha"/></svg></span></span>
+          </a>
+          <a class="cob cob--foto" data-wa="maquinaria" data-track="linea-maquinaria" href="https://wa.me/5492345478090">
             <img src="assets/img/agro-cosecha.jpg" width="1080" height="1350" alt="" loading="lazy">
-            <span class="line-card__icon" aria-hidden="true"><i class="ti ti-tractor"></i></span>
-            <h3 class="t-h3">Maquinaria y drones</h3>
-            <p>Cosechadoras, tractores, pulverizadoras y drones: protegé tu herramienta de trabajo.</p>
-            <span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+            <span class="velo"></span>
+            <span class="cob__txt"><b>Maquinaria y drones</b><span>Cosechadoras, tractores, pulverizadoras y drones.</span><span class="cob__cta">Cotizar maquinaria<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-flecha"/></svg></span></span>
           </a>
-          <a class="line-card line-card--wide" data-wa="hogar" data-track="linea-hogar" href="https://wa.me/5492345478090">
-            <span class="line-card__icon" aria-hidden="true"><i class="ti ti-home-shield"></i></span>
-            <h3 class="t-h3">Hogar</h3>
-            <p>Tu casa vale mucho más que cuatro paredes. Combinado Familiar con asistencia 24/7 en cerrajería, plomería, gas y electricidad.</p>
-            <span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          <a class="cob cob--oscura" data-wa="comercio" data-track="linea-comercio" href="https://wa.me/5492345478090">
+            <svg width="28" height="28" fill="none" stroke="#c7f1df" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-local"/></svg>
+            <span class="cob__txt"><b>Comercio y ART</b><span>Que un imprevisto no frene tus ventas, y tu equipo cubierto.</span><span class="cob__cta">Cotizar comercio<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-flecha"/></svg></span></span>
           </a>
-          <a class="line-card" data-wa="auto" data-track="linea-auto" href="https://wa.me/5492345478090">
-            <span class="line-card__icon" aria-hidden="true"><i class="ti ti-car"></i></span>
-            <h3 class="t-h3">Auto y moto</h3>
-            <p>Todo Riesgo o Terceros Completo, con el respaldo que necesitás para circular tranquilo.</p>
-            <span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          <a class="cob cob--blanca" data-wa="transporte" data-track="linea-transporte" href="https://wa.me/5492345478090">
+            <svg width="28" height="28" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-camion"/></svg>
+            <span class="cob__txt"><b>Transporte</b><span>Camión, acoplado, carga y chofer.</span><span class="cob__cta">Cotizar transporte<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-flecha"/></svg></span></span>
           </a>
-          <a class="line-card" data-wa="comercio" data-track="linea-comercio" href="https://wa.me/5492345478090">
-            <span class="line-card__icon" aria-hidden="true"><i class="ti ti-building-store"></i></span>
-            <h3 class="t-h3">Comercio y ART</h3>
-            <p>Que un imprevisto no frene tus ventas, y tu equipo cubierto.</p>
-            <span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          <a class="cob cob--amarilla" data-wa="vida" data-track="linea-vida" href="https://wa.me/5492345478090">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-corazon"/></svg>
+            <span class="cob__txt"><b>Vida y accidentes personales</b><span>Para vos, tu familia y si trabajás por tu cuenta.</span><span class="cob__cta">Consultar<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-flecha"/></svg></span></span>
           </a>
-          <a class="line-card" data-wa="transporte" data-track="linea-transporte" href="https://wa.me/5492345478090">
-            <span class="line-card__icon" aria-hidden="true"><i class="ti ti-truck"></i></span>
-            <h3 class="t-h3">Transporte</h3>
-            <p>Camión, acoplado, carga y chofer. Llevá tu trabajo sobre ruedas.</p>
-            <span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+        </div>
+        <!-- TODO: reemplazar por los logos en monocromo cuando las compañías autoricen su uso -->
+        <p class="nota" data-reveal>Trabajamos con Federación Patronal, Segurometal, San Cristóbal y Sancor Seguros.</p>
+      </section>
+
+      <!-- Preguntas -->
+      <section class="preguntas" id="preguntas" aria-labelledby="faq-title">
+        <div class="head" data-reveal>
+          <h2 id="faq-title" class="h2">Lo que más nos preguntan</h2>
+          <p class="bajada">¿Te quedó otra duda? Escribinos y te respondemos en minutos.</p>
+        </div>
+        <div class="acordeon" data-stagger>
+          <div class="preg" data-open="true">
+            <h3><button class="preg__btn" type="button">¿Desde cuándo estoy cubierto en el seguro agrícola?<svg class="preg__mas" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#i-mas"/></svg></button></h3>
+            <div class="preg__panel" role="region"><div><p>Desde la emergencia del cultivo, es decir, desde que nacen las plantas, según las condiciones de la póliza.</p></div></div>
+          </div>
+          <div class="preg">
+            <h3><button class="preg__btn" type="button">¿Qué necesito para cotizar?<svg class="preg__mas" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#i-mas"/></svg></button></h3>
+            <div class="preg__panel" role="region"><div><p>Cultivo, hectáreas, ubicación de los lotes y fecha de siembra. Con eso arrancamos.</p></div></div>
+          </div>
+          <div class="preg">
+            <h3><button class="preg__btn" type="button">¿Puedo asegurar fina y gruesa juntas?<svg class="preg__mas" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#i-mas"/></svg></button></h3>
+            <div class="preg__panel" role="region"><div><p>Sí, con la cobertura de ciclo completo las tenés en una sola póliza.</p></div></div>
+          </div>
+          <div class="preg">
+            <h3><button class="preg__btn" type="button">¿Qué hago si tengo un siniestro?<svg class="preg__mas" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#i-mas"/></svg></button></h3>
+            <div class="preg__panel" role="region"><div><p>Escribinos apenas pase. Te guiamos con la denuncia y te acompañamos hasta el final.</p></div></div>
+          </div>
+          <div class="preg">
+            <h3><button class="preg__btn" type="button">¿Tengo que ir a la oficina?<svg class="preg__mas" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#i-mas"/></svg></button></h3>
+            <div class="preg__panel" role="region"><div><p>No. Todo se hace por WhatsApp y la póliza es digital. Si preferís, te esperamos en Sargento Cabral 276.</p></div></div>
+          </div>
+          <div class="preg">
+            <h3><button class="preg__btn" type="button">¿Solo trabajan seguros de campo?<svg class="preg__mas" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#i-mas"/></svg></button></h3>
+            <div class="preg__panel" role="region"><div><p>No. También hogar, auto, moto, comercio, ART, transporte, vida y más.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cierre -->
+      <section class="franja" id="contacto" aria-labelledby="cierre-title">
+        <div class="cierre" data-reveal>
+          <span class="cierre__forma" aria-hidden="true"></span>
+          <div class="cierre__texto">
+            <h2 id="cierre-title" class="h2">¿Lo resolvemos <span class="clave">hoy</span>?</h2>
+            <p>En minutos tenés tu cotización. Sin compromiso y sin letra chica.</p>
+          </div>
+          <a class="btn btn--acento" data-wa="general" data-track="cierre" href="https://wa.me/5492345478090">
+            <svg class="i-wa" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp
           </a>
-          <a class="line-card" data-wa="vida" data-track="linea-vida" href="https://wa.me/5492345478090">
-            <span class="line-card__icon" aria-hidden="true"><i class="ti ti-heart-handshake"></i></span>
-            <h3 class="t-h3">Vida y accidentes personales</h3>
-            <p>Para vos, tu familia y si trabajás por tu cuenta.</p>
-            <span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
-          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="pie__fila">
+        <svg class="logo" viewBox="0 0 1087 409" role="img" aria-label="ZOIA, asesores de seguros">
+          <polygon class="z" points="0,0 280,0 195,148 280,148 280,280 0,280 85,131 0,131"/>
+          <circle class="o" cx="452" cy="140" r="140"/>
+          <rect class="i" x="614" y="0" width="131" height="280"/>
+          <polygon class="a" points="765,280 925,0 1087,280"/>
+          <text class="t" x="0" y="386" font-family="Montserrat, sans-serif" font-weight="500" font-size="100" textLength="1087" lengthAdjust="spacingAndGlyphs">asesores de seguros</text>
+        </svg>
+        <div class="pie__datos">
+          <div><b>Oficina</b><span>Sargento Cabral 276, Norberto de la Riestra</span><span>De 8 a 12:30 h</span></div>
+          <div><b>Contacto</b><a data-wa="general" data-track="pie" href="https://wa.me/5492345478090">WhatsApp 24/7 +54 9 2345 47-8090</a><a href="https://www.instagram.com/zoia.asesores/" target="_blank" rel="noopener">Instagram @zoia.asesores</a></div>
         </div>
       </div>
-    </section>
+      <!-- TODO legal: número de matrícula y leyenda obligatoria de la SSN -->
+      <p class="pie__legal">María Rosa Zoia, Productora Asesora de Seguros. Mat. SSN N.º [pendiente]. Coberturas sujetas a las condiciones de la póliza y de la compañía aseguradora.</p>
+    </footer>
+  </div>
 
-    <!-- 7 · Compañías que nos respaldan -->
-    <!-- TODO: reemplazar los nombres por los logos en monocromo cuando las compañías autoricen su uso -->
-    <section class="partners" id="companias" aria-labelledby="partners-title">
-      <h2 id="partners-title" class="partners__title container" data-reveal>Te respaldan las aseguradoras más sólidas</h2>
-      <div class="marquee" data-reveal>
-        <ul class="marquee__track">
-          <li class="wordmark">Federación Patronal</li>
-          <li class="wordmark">Segurometal</li>
-          <li class="wordmark">San Cristóbal</li>
-          <li class="wordmark">Sancor Seguros</li>
-          <li class="wordmark" aria-hidden="true">Federación Patronal</li>
-          <li class="wordmark" aria-hidden="true">Segurometal</li>
-          <li class="wordmark" aria-hidden="true">San Cristóbal</li>
-          <li class="wordmark" aria-hidden="true">Sancor Seguros</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 8 · Preguntas frecuentes -->
-    <section class="section how" id="preguntas" aria-labelledby="faq-title">
-      <div class="container faq__layout">
-        <div class="faq__aside" data-reveal>
-          <h2 id="faq-title" class="t-h2">Preguntas frecuentes</h2>
-          <p class="t-lead">¿Te quedó alguna duda? Escribinos y te respondemos al toque.</p>
-          <a class="btn btn--whatsapp" data-wa="general" data-track="faq" href="https://wa.me/5492345478090">
-            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Escribinos por WhatsApp
-          </a>
-        </div>
-        <div class="accordion" data-stagger>
-          <div class="acc-item" data-open="true">
-            <h3><button class="acc-trigger" type="button">¿Desde cuándo estoy cubierto en el seguro agrícola?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
-            <div class="acc-panel" role="region"><div><p>Desde la emergencia del cultivo, es decir, desde que nacen las plantas, según las condiciones de la póliza.</p></div></div>
-          </div>
-          <div class="acc-item">
-            <h3><button class="acc-trigger" type="button">¿Qué necesito para cotizar?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
-            <div class="acc-panel" role="region"><div><p>Cultivo, hectáreas, ubicación de los lotes y fecha de siembra. Con eso arrancamos.</p></div></div>
-          </div>
-          <div class="acc-item">
-            <h3><button class="acc-trigger" type="button">¿Puedo asegurar fina y gruesa juntas?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
-            <div class="acc-panel" role="region"><div><p>Sí, con la cobertura de ciclo completo las tenés en una sola póliza.</p></div></div>
-          </div>
-          <div class="acc-item">
-            <h3><button class="acc-trigger" type="button">¿Qué hago si tengo un siniestro?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
-            <div class="acc-panel" role="region"><div><p>Escribinos apenas pase. Te guiamos con la denuncia y te acompañamos hasta el final.</p></div></div>
-          </div>
-          <div class="acc-item">
-            <h3><button class="acc-trigger" type="button">¿Tengo que ir a la oficina?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
-            <div class="acc-panel" role="region"><div><p>No. Todo se hace por WhatsApp y la póliza es digital. Si preferís, te esperamos en Sargento Cabral 276.</p></div></div>
-          </div>
-          <div class="acc-item">
-            <h3><button class="acc-trigger" type="button">¿Solo trabajan seguros de campo?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
-            <div class="acc-panel" role="region"><div><p>No. También hogar, auto, moto, comercio, ART, transporte, vida y más.</p></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 9 · Cierre y pie -->
-    <section class="closing on-brand-deep" id="contacto" aria-labelledby="closing-title">
-      <div class="closing__shapes" aria-hidden="true">
-        <span class="cshape cshape--o"></span>
-        <span class="cshape cshape--a"></span>
-        <span class="cshape cshape--q parallax-slow"></span>
-        <span class="cshape cshape--i"></span>
-      </div>
-      <div class="container closing__inner">
-        <h2 id="closing-title" class="closing__title" data-reveal>¿Lo resolvemos <span class="hl">hoy</span>?</h2>
-        <p class="t-lead" data-reveal>Escribinos y en minutos tenés tu cotización. Sin compromiso y sin letra chica.</p>
-        <div data-reveal>
-          <a class="btn btn--whatsapp" data-wa="general" data-track="cierre" href="https://wa.me/5492345478090">
-            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Escribinos por WhatsApp
-          </a>
-        </div>
-      </div>
-
-      <footer class="footer container">
-        <div class="footer__grid">
-          <div class="footer__brand">
-            <svg class="logo" viewBox="0 0 1087 409" role="img" aria-label="ZOIA, asesores de seguros">
-              <polygon class="lz" points="0,0 280,0 195,148 280,148 280,280 0,280 85,131 0,131"/>
-              <circle class="lo" cx="452" cy="140" r="140"/>
-              <rect class="li" x="614" y="0" width="131" height="280"/>
-              <polygon class="la" points="765,280 925,0 1087,280"/>
-              <text class="lt" x="0" y="386" font-family="Montserrat, sans-serif" font-weight="500" font-size="100" textLength="1087" lengthAdjust="spacingAndGlyphs">asesores de seguros</text>
-            </svg>
-            <p>Seguros para familias, comercios, transportistas y productores de Norberto de la Riestra y la zona.</p>
-          </div>
-          <div>
-            <h3>Oficina</h3>
-            <ul>
-              <li><i class="ti ti-map-pin" aria-hidden="true"></i>Sargento Cabral 276, Norberto de la Riestra</li>
-              <li><i class="ti ti-clock" aria-hidden="true"></i>De 8 a 12:30 h</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Contacto</h3>
-            <ul>
-              <li><i class="ti ti-brand-whatsapp" aria-hidden="true"></i><a data-wa="general" data-track="pie" href="https://wa.me/5492345478090">WhatsApp 24/7: +54 9 2345 47-8090</a></li>
-              <li><i class="ti ti-brand-instagram" aria-hidden="true"></i><a href="https://www.instagram.com/zoia.asesores/" target="_blank" rel="noopener">@zoia.asesores</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer__legal">
-          <!-- TODO legal: número de matrícula y leyenda obligatoria de la SSN -->
-          <span>María Rosa Zoia, Productora Asesora de Seguros. Mat. SSN N.º [pendiente]. Leyenda SSN [pendiente].</span>
-          <span>© <span data-year>2026</span> ZOIA | Asesores de Seguros</span>
-        </div>
-      </footer>
-    </section>
-  </main>
-
-  <!-- Botón flotante -->
-  <a class="btn btn--whatsapp fab" data-wa="float" data-track="flotante" href="https://wa.me/5492345478090" aria-label="Cotizá ahora por WhatsApp">
-    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Cotizá ahora
+  <!-- WhatsApp: botón redondo en escritorio, barra con Rosa en celular -->
+  <a class="flotante" data-wa="float" data-track="flotante" href="https://wa.me/5492345478090" aria-label="Cotizar por WhatsApp">
+    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+  <a class="barra-movil" data-wa="float" data-track="barra-movil" href="https://wa.me/5492345478090">
+    <img src="assets/img/rosa-avatar.jpg" width="320" height="320" alt="">
+    <span class="barra-movil__txt"><b>¿Lo resolvemos hoy?</b><span>Te responde Rosa por WhatsApp</span></span>
+    <span class="barra-movil__ico"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wa"/></svg></span>
   </a>
 
   <script src="js/main.js" defer></script>

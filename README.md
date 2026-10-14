@@ -2,13 +2,15 @@
 
 Landing de una página para ZOIA, la productora asesora de seguros de María Rosa Zoia en Norberto de la Riestra. Objetivo único: que el visitante toque "Escribinos por WhatsApp".
 
-Sitio estático (HTML, CSS y JS sin dependencias ni build), listo para GitHub Pages.
+Diseño: "Landing bento" del lienzo "ZOIA · Landing page" en Claude, con los tokens de "ZOIA · Sistema de diseño".
+
+Sitio estático (HTML, CSS y JS sin dependencias ni build), publicado con GitHub Pages en https://jperozo97.github.io/ZOIA-website/.
 
 ## Estructura
 
 | Archivo | Qué es |
 |---|---|
-| `index.html` | La landing (10 bloques: barra, hero, beneficios agro, cómo funciona, Rosa, por qué ZOIA, coberturas, compañías, preguntas, cierre) |
+| `index.html` | La landing bento: hero, línea de la campaña, cómo cotizar, Rosa y por qué ZOIA, coberturas, preguntas, cierre y pie |
 | `agro/index.html` | Entrada del QR de la lona: redirige a `/?v=agro`, que muestra el hero agro |
 | `design-system.html` | Documentación visual del design system |
 | `css/tokens.css` | Tokens: colores, tipografía, espaciado, radios, sombras, movimiento, modo oscuro |
@@ -35,8 +37,7 @@ Abrir http://localhost:4173 (o http://localhost:4173/?v=agro).
 
 ## Pendientes antes de publicar
 
-- [ ] **Legal:** número de matrícula SSN y leyenda obligatoria de la SSN (bloque de Rosa y pie). Buscar `[pendiente]`.
-- [ ] Foto real de Rosa (hoy hay una foto de campo en su lugar, marcada con `TODO`).
+- [ ] **Legal:** número de matrícula SSN y leyenda obligatoria de la SSN (pie). Buscar `[pendiente]`.
 - [ ] Autorización y logos en monocromo de Federación Patronal, Segurometal, San Cristóbal y Sancor (hoy van como texto).
 - [ ] Confirmar "emisión en el día" para agro, descuento por contratación temprana y "cliente integral".
 - [ ] Dominio (por ejemplo, zoia.com.ar) y URL del QR de la lona.

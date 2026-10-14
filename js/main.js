@@ -21,7 +21,7 @@
 
   document.querySelectorAll("[data-wa]").forEach((el) => {
     let key = el.dataset.wa;
-    // El botón flotante usa el mensaje agro cuando la visita llega desde el QR de la lona
+    // Los botones flotantes usan el mensaje agro cuando la visita llega desde el QR de la lona
     if (key === "float") key = isAgro ? "agro" : "general";
     el.href = waLink(key);
     el.target = "_blank";
@@ -45,6 +45,7 @@
             if (/^\s+$/.test(part)) { frag.append(" "); return; }
             const outer = document.createElement("span");
             outer.className = "w";
+            outer.setAttribute("aria-hidden", "true");
             const inner = document.createElement("span");
             inner.textContent = part;
             inner.style.setProperty("--wi", index++);
@@ -59,21 +60,23 @@
     };
     el.setAttribute("aria-label", el.textContent.trim());
     wrapWords(el);
-    el.querySelectorAll(".w").forEach((w) => w.setAttribute("aria-hidden", "true"));
   });
 
-  document.querySelectorAll("[data-hero-fade]").forEach((el, i) => el.style.setProperty("--fi", i));
-  document.querySelectorAll(".hero-mosaic > *").forEach((el, i) => el.style.setProperty("--mi", i));
+  /* ---------- Orden de entrada del hero ---------- */
+  document.querySelectorAll(".hero > .tile").forEach((el, i) => el.style.setProperty("--i", i));
+  [...document.querySelectorAll(".hero [data-fade]")]
+    .filter((el) => getComputedStyle(el).display !== "none")
+    .forEach((el, i) => el.style.setProperty("--fi", i));
 
   /* ---------- Revelado al entrar en pantalla ---------- */
   document.querySelectorAll("[data-stagger]").forEach((group) => {
     [...group.children].forEach((child, i) => {
       child.style.setProperty("--i", i);
-      if (!child.hasAttribute("data-reveal")) child.setAttribute("data-reveal", group.dataset.stagger || "");
+      child.setAttribute("data-reveal", "");
     });
   });
 
-  const revealTargets = document.querySelectorAll("[data-reveal], .steps, .section-head");
+  const revealTargets = document.querySelectorAll("[data-reveal], .linea-tiempo, .ciclo, .pasos, .venn, .cierre, .rosa");
   if ("IntersectionObserver" in window && !reduceMotion) {
     const io = new IntersectionObserver(
       (entries) => {
@@ -83,42 +86,41 @@
           io.unobserve(entry.target);
         });
       },
-      { rootMargin: "0px 0px -12% 0px", threshold: 0.12 }
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.15 }
     );
     revealTargets.forEach((el) => io.observe(el));
   } else {
     revealTargets.forEach((el) => el.classList.add("is-in"));
   }
 
-  /* ---------- Barra superior y botón flotante según el hero ---------- */
+  /* ---------- Barra superior y WhatsApp flotante según el hero ---------- */
   const nav = document.querySelector(".nav");
-  const fab = document.querySelector(".fab");
-  const hero = [...document.querySelectorAll(".hero")].find((h) => h.offsetParent !== null);
-  if (hero && "IntersectionObserver" in window) {
+  const floating = document.querySelectorAll(".flotante, .barra-movil");
+  const heroText = document.querySelector(".hero__ctas");
+  if (heroText && "IntersectionObserver" in window) {
     let pulsed = false;
     new IntersectionObserver(
       ([entry]) => {
-        const past = !entry.isIntersecting;
-        nav.dataset.state = past ? "solid" : "clear";
-        fab.classList.toggle("is-visible", past);
+        const past = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+        nav.dataset.scrolled = String(past);
+        floating.forEach((el) => el.classList.toggle("is-visible", past));
         if (past && !pulsed && !reduceMotion) {
           pulsed = true;
-          fab.classList.add("pulse");
+          document.querySelector(".flotante").classList.add("pulso");
         }
       },
-      { rootMargin: "-80px 0px 0px 0px", threshold: 0.02 }
-    ).observe(hero.querySelector(".hero__actions") || hero);
-  } else if (fab) {
-    fab.classList.add("is-visible");
+      { rootMargin: "-72px 0px 0px 0px" }
+    ).observe(heroText);
+  } else {
+    floating.forEach((el) => el.classList.add("is-visible"));
   }
 
   /* ---------- Preguntas frecuentes (acordeón accesible) ---------- */
-  document.querySelectorAll(".acc-item").forEach((item, i) => {
-    const trigger = item.querySelector(".acc-trigger");
-    const panel = item.querySelector(".acc-panel");
-    const id = `faq-panel-${i}`;
-    panel.id = id;
-    trigger.setAttribute("aria-controls", id);
+  document.querySelectorAll(".preg").forEach((item, i) => {
+    const trigger = item.querySelector(".preg__btn");
+    const panel = item.querySelector(".preg__panel");
+    panel.id = `preg-${i}`;
+    trigger.setAttribute("aria-controls", panel.id);
     trigger.setAttribute("aria-expanded", item.dataset.open === "true" ? "true" : "false");
     trigger.addEventListener("click", () => {
       const open = item.dataset.open !== "true";
@@ -126,15 +128,4 @@
       trigger.setAttribute("aria-expanded", String(open));
     });
   });
-
-  /* ---------- Marquee: duplica la pista para un loop sin cortes ---------- */
-  document.querySelectorAll(".marquee").forEach((m) => {
-    const track = m.querySelector(".marquee__track");
-    const clone = track.cloneNode(true);
-    clone.setAttribute("aria-hidden", "true");
-    m.append(clone);
-  });
-
-  /* ---------- Año del pie ---------- */
-  document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
 })();
