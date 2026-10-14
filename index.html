@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ZOIA | Asesores de Seguros en Norberto de la Riestra · Agro, hogar y auto</title>
+  <meta name="description" content="Seguros agrícolas, hogar, auto y comercio en Norberto de la Riestra y 25 de Mayo. Cotizá por WhatsApp al instante con Rosa Zoia, productora asesora matriculada.">
+  <meta name="theme-color" content="#012c36">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ZOIA | Asesores de Seguros">
+  <meta property="og:description" content="Cotización al instante, póliza en el día y 100% digital. Agro, hogar, auto, comercio y transporte en Norberto de la Riestra.">
+  <meta property="og:image" content="assets/img/agro-siembra.jpg">
+  <meta property="og:locale" content="es_AR">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+
+  <!-- Entrada: /agro/ o ?v=agro muestra el hero agro (QR de la lona). Va antes del CSS para evitar parpadeo. -->
+  <script>
+    (function () {
+      var r = document.documentElement;
+      r.classList.add("js");
+      var p = new URLSearchParams(location.search);
+      if (p.get("v") === "agro" || /\/agro\/?$/.test(location.pathname)) r.dataset.entry = "agro";
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "InsuranceAgency",
+    "name": "ZOIA | Asesores de Seguros",
+    "telephone": "+54 9 2345 47-8090",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sargento Cabral 276",
+      "addressLocality": "Norberto de la Riestra",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "openingHours": "Mo-Fr 08:00-12:30",
+    "sameAs": ["https://www.instagram.com/zoia.asesores/"],
+    "areaServed": ["Norberto de la Riestra", "25 de Mayo"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- 0 · Barra superior -->
+  <header class="nav" data-state="clear">
+    <div class="container nav__inner">
+      <a href="#top" aria-label="ZOIA, asesores de seguros. Ir al inicio">
+        <svg class="logo" viewBox="0 0 1087 409" role="img" aria-hidden="true">
+          <polygon class="shape lz" points="0,0 280,0 195,148 280,148 280,280 0,280 85,131 0,131"/>
+          <circle class="shape lo" cx="452" cy="140" r="140"/>
+          <rect class="shape li" x="614" y="0" width="131" height="280"/>
+          <polygon class="shape la" points="765,280 925,0 1087,280"/>
+          <text class="lt" x="0" y="386" font-family="Montserrat, sans-serif" font-weight="500" font-size="100" textLength="1087" lengthAdjust="spacingAndGlyphs">asesores de seguros</text>
+        </svg>
+      </a>
+      <nav class="nav__links" aria-label="Secciones">
+        <a href="#agro">Seguro agrícola</a>
+        <a href="#coberturas">Coberturas</a>
+        <a href="#rosa">Quién te asesora</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <a class="btn btn--sm btn--whatsapp" data-wa="general" data-track="barra" href="https://wa.me/5492345478090">
+        <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Escribinos
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <span id="top"></span>
+
+    <!-- 1 · Hero agro (entrada desde el QR de la lona) -->
+    <section class="hero hero--agro only-agro" aria-labelledby="hero-agro-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="t-label hero__eyebrow" data-hero-fade>Seguros agrícolas</span>
+          <h1 id="hero-agro-title" class="t-display hero__title split">Tu campaña, <span class="hl">protegida</span> desde que nace</h1>
+          <p class="t-lead hero__lead" data-hero-fade>Cobertura desde la emergencia del cultivo, fina y gruesa en una sola póliza. Te cotizamos por WhatsApp, sin vueltas.</p>
+          <div class="hero__actions" data-hero-fade>
+            <a class="btn btn--whatsapp" data-wa="agro" data-track="hero-agro" href="https://wa.me/5492345478090">
+              <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Cotizá tu seguro agrícola
+            </a>
+          </div>
+          <p class="hero__note" data-hero-fade>
+            <i class="ti ti-user-heart" aria-hidden="true"></i>
+            Te responde Rosa, tu asesora. Trabajamos con las compañías más sólidas del país.
+          </p>
+        </div>
+        <div class="hero-photo">
+          <span class="hero-photo__curve" aria-hidden="true"></span>
+          <div class="hero-photo__frame">
+            <img src="assets/img/agro-siembra.jpg" width="1080" height="1350" alt="Lote recién nacido, con las plantas emergiendo en hileras" fetchpriority="high">
+          </div>
+          <span class="hero-photo__tri" aria-hidden="true"></span>
+          <span class="hero-photo__dot" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1B · Hero general (entrada desde Instagram y Google) -->
+    <section class="hero hero--general only-general" aria-labelledby="hero-general-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="t-label hero__eyebrow" data-hero-fade>ZOIA | Asesores de seguros</span>
+          <h1 id="hero-general-title" class="t-display hero__title split">Tener un seguro no es lo mismo que estar realmente <span class="hl">protegido</span></h1>
+          <p class="t-lead hero__lead" data-hero-fade>Cotización al instante, póliza en el día y 100% digital. Para tu casa, tu auto, tu negocio y tu campo.</p>
+          <div class="hero__actions" data-hero-fade>
+            <a class="btn btn--whatsapp" data-wa="general" data-track="hero-general" href="https://wa.me/5492345478090">
+              <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Cotizá por WhatsApp
+            </a>
+            <a class="btn btn--ghost" href="#coberturas">Ver coberturas</a>
+          </div>
+        </div>
+        <div class="hero-mosaic" aria-hidden="true">
+          <div class="mosaic-z"></div>
+          <div class="mosaic-o"><img src="assets/img/hogar-familia.jpg" width="911" height="911" alt=""></div>
+          <div class="mosaic-i"><img src="assets/img/agro-siembra.jpg" width="1080" height="1350" alt=""></div>
+          <div class="mosaic-a"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · Beneficios del seguro agrícola -->
+    <section class="section" id="agro" aria-labelledby="agro-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="agro-title" class="t-h2">Una póliza pensada para toda tu <span class="hl">campaña</span></h2>
+        </div>
+
+        <div class="bento" data-stagger>
+          <article class="tile tile--photo">
+            <img src="assets/img/agro-tormenta.jpg" width="1080" height="1350" alt="" loading="lazy">
+            <span class="tile__icon" aria-hidden="true"><i class="ti ti-seeding"></i></span>
+            <h3 class="t-h3">Cobertura desde emergencia</h3>
+            <p>Estás protegido desde el nacimiento de las plantas, no desde que el cultivo ya vale.</p>
+          </article>
+          <article class="tile tile--mint">
+            <span class="tile__icon" aria-hidden="true"><i class="ti ti-recycle"></i></span>
+            <h3 class="t-h3">Resiembra</h3>
+            <p>Si un evento cubierto te obliga a volver a sembrar, la póliza te ayuda a cubrir ese costo.</p>
+          </article>
+          <article class="tile tile--brand">
+            <span class="tile__icon" aria-hidden="true"><i class="ti ti-calendar-repeat"></i></span>
+            <h3 class="t-h3">Ciclo completo</h3>
+            <p>Tu cosecha fina y gruesa en una sola póliza: un solo trámite, un solo contacto.</p>
+          </article>
+          <article class="tile tile--yellow tile--wide">
+            <span class="tile__corner" aria-hidden="true"></span>
+            <span class="tile__icon" aria-hidden="true"><i class="ti ti-discount"></i></span>
+            <h3 class="t-h3">Descuentos</h3>
+            <p>Beneficios por contratación temprana: cuanto antes asegurás, mejor.</p>
+          </article>
+        </div>
+
+        <div class="bento-foot" data-reveal>
+          <p>Granizo, viento, exceso de lluvia, incendio: armamos la cobertura a la medida de tus lotes.</p>
+          <a class="btn btn--dark" data-wa="agro" data-track="beneficios-agro" href="https://wa.me/5492345478090">
+            Quiero cotizar mis lotes<i class="ti ti-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · Cómo funciona -->
+    <section class="section how" id="como-funciona" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="how-title" class="t-h2">Asegurar tu campo, en 3 pasos</h2>
+        </div>
+        <div class="steps" role="list">
+          <span class="steps__track" aria-hidden="true"></span>
+          <div role="listitem" class="step" style="--i:0" data-reveal>
+            <span class="step__num" aria-hidden="true">1</span>
+            <div>
+              <h3 class="t-h3">Escribinos por WhatsApp</h3>
+              <p class="t-body">Contanos qué sembraste, cuántas hectáreas y dónde.</p>
+            </div>
+          </div>
+          <div role="listitem" class="step" style="--i:1" data-reveal>
+            <span class="step__num" aria-hidden="true">2</span>
+            <div>
+              <h3 class="t-h3">Recibí tu cotización</h3>
+              <p class="t-body">Comparamos entre varias compañías y te explicamos qué cubre cada opción, en criollo.</p>
+            </div>
+          </div>
+          <div role="listitem" class="step" style="--i:2" data-reveal>
+            <span class="step__num" aria-hidden="true">3</span>
+            <div>
+              <h3 class="t-h3">Listo, estás cubierto</h3>
+              <p class="t-body">Gestionamos la póliza 100% digital y te acompañamos si pasa algo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="steps-cta" data-reveal>
+          <a class="btn btn--whatsapp" data-wa="agro" data-track="como-funciona" href="https://wa.me/5492345478090">
+            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Empezar ahora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · Quién te asesora -->
+    <section class="section on-brand" id="rosa" aria-labelledby="rosa-title">
+      <div class="container rosa__grid">
+        <div class="rosa__visual" data-reveal="scale">
+          <span class="rosa__bar parallax-slow" aria-hidden="true"></span>
+          <div class="rosa__portrait">
+            <!-- TODO: reemplazar por la foto real de Rosa (oficina o campo, sin el cartel viejo "Zoia Seguros"). Cuadrada, mínimo 900x900. -->
+            <img src="assets/img/agro-atardecer.jpg" width="1080" height="1350" alt="Campo de trigo al atardecer en la zona de Norberto de la Riestra" loading="lazy">
+          </div>
+          <span class="rosa__quarter parallax-slow" aria-hidden="true"></span>
+        </div>
+        <div>
+          <h2 id="rosa-title" class="t-h2 rosa__title" data-reveal>No sos un <span class="hl">número</span></h2>
+          <p class="rosa__text" data-reveal>
+            Soy <strong>María Rosa Zoia</strong>, Productora Asesora de Seguros matriculada. Como amante del campo, me especialicé en seguros agropecuarios. Mi objetivo es simple: una atención 100% personalizada, con un lenguaje claro, sin vueltas, y con el respaldo de las compañías más sólidas del mercado. <strong>Me escribís a mí, y te respondo yo.</strong>
+          </p>
+          <div class="rosa__sign" data-reveal>
+            <svg class="rosa__mark" viewBox="0 0 1087 280" aria-hidden="true">
+              <polygon fill="#eade83" points="0,0 280,0 195,148 280,148 280,280 0,280 85,131 0,131"/>
+              <circle fill="#c7f1df" cx="452" cy="140" r="140"/>
+              <rect fill="#eade83" x="614" y="0" width="131" height="280"/>
+              <polygon fill="#eade83" points="765,280 925,0 1087,280"/>
+            </svg>
+            <div>
+              <b>Rosa Zoia</b>
+              <!-- TODO legal: completar el número de matrícula SSN -->
+              <span>Productora Asesora de Seguros · Mat. SSN N.º [pendiente]</span>
+            </div>
+          </div>
+          <div data-reveal>
+            <a class="btn" data-wa="rosa" data-track="rosa" href="https://wa.me/5492345478090">
+              <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Hablar con Rosa
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · Por qué ZOIA -->
+    <section class="section" id="por-que" aria-labelledby="why-title">
+      <div class="container why__layout">
+        <div class="section-head" data-reveal>
+          <h2 id="why-title" class="t-h2">Tu tranquilidad, en tiempo <span class="hl">récord</span></h2>
+          <p class="t-lead">Cuatro razones por las que familias, comercios y productores de la zona nos eligen.</p>
+        </div>
+        <div class="why__grid" data-stagger>
+          <div class="why__item">
+            <span class="why__shape why__shape--circle" aria-hidden="true"><i class="ti ti-bolt"></i></span>
+            <div>
+              <h3 class="t-h3">Al instante</h3>
+              <p>Cotización en minutos y póliza emitida en el día.</p>
+            </div>
+          </div>
+          <div class="why__item">
+            <span class="why__shape why__shape--quarter" aria-hidden="true"><i class="ti ti-file-check"></i></span>
+            <div>
+              <h3 class="t-h3">Cero burocracia</h3>
+              <p>Nosotros hacemos los trámites; vos seguís con lo tuyo.</p>
+            </div>
+          </div>
+          <div class="why__item">
+            <span class="why__shape why__shape--square" aria-hidden="true"><i class="ti ti-stack-2"></i></span>
+            <div>
+              <h3 class="t-h3">Varias compañías, un solo lugar</h3>
+              <p>Comparamos por vos y elegimos lo que mejor te cubre.</p>
+            </div>
+          </div>
+          <div class="why__item">
+            <span class="why__shape why__shape--tri" aria-hidden="true"><i class="ti ti-message-circle"></i></span>
+            <div>
+              <h3 class="t-h3">Siempre a un mensaje</h3>
+              <p>Atención por WhatsApp 24/7 y oficina en Riestra.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · Todo lo que asegurás con ZOIA -->
+    <section class="section lines" id="coberturas" aria-labelledby="lines-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="lines-title" class="t-h2">Además del campo, cuidamos todo lo que te <span class="hl">importa</span></h2>
+          <p class="t-lead">Si asegurás más de un bien con nosotros, accedés a beneficios como cliente integral.</p>
+        </div>
+        <div class="lines__grid" data-stagger>
+          <a class="line-card line-card--photo line-card--tall" data-wa="maquinaria" data-track="linea-maquinaria" href="https://wa.me/5492345478090">
+            <img src="assets/img/agro-cosecha.jpg" width="1080" height="1350" alt="" loading="lazy">
+            <span class="line-card__icon" aria-hidden="true"><i class="ti ti-tractor"></i></span>
+            <h3 class="t-h3">Maquinaria y drones</h3>
+            <p>Cosechadoras, tractores, pulverizadoras y drones: protegé tu herramienta de trabajo.</p>
+            <span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="line-card line-card--wide" data-wa="hogar" data-track="linea-hogar" href="https://wa.me/5492345478090">
+            <span class="line-card__icon" aria-hidden="true"><i class="ti ti-home-shield"></i></span>
+            <h3 class="t-h3">Hogar</h3>
+            <p>Tu casa vale mucho más que cuatro paredes. Combinado Familiar con asistencia 24/7 en cerrajería, plomería, gas y electricidad.</p>
+            <span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="line-card" data-wa="auto" data-track="linea-auto" href="https://wa.me/5492345478090">
+            <span class="line-card__icon" aria-hidden="true"><i class="ti ti-car"></i></span>
+            <h3 class="t-h3">Auto y moto</h3>
+            <p>Todo Riesgo o Terceros Completo, con el respaldo que necesitás para circular tranquilo.</p>
+            <span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="line-card" data-wa="comercio" data-track="linea-comercio" href="https://wa.me/5492345478090">
+            <span class="line-card__icon" aria-hidden="true"><i class="ti ti-building-store"></i></span>
+            <h3 class="t-h3">Comercio y ART</h3>
+            <p>Que un imprevisto no frene tus ventas, y tu equipo cubierto.</p>
+            <span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="line-card" data-wa="transporte" data-track="linea-transporte" href="https://wa.me/5492345478090">
+            <span class="line-card__icon" aria-hidden="true"><i class="ti ti-truck"></i></span>
+            <h3 class="t-h3">Transporte</h3>
+            <p>Camión, acoplado, carga y chofer. Llevá tu trabajo sobre ruedas.</p>
+            <span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="line-card" data-wa="vida" data-track="linea-vida" href="https://wa.me/5492345478090">
+            <span class="line-card__icon" aria-hidden="true"><i class="ti ti-heart-handshake"></i></span>
+            <h3 class="t-h3">Vida y accidentes personales</h3>
+            <p>Para vos, tu familia y si trabajás por tu cuenta.</p>
+            <span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · Compañías que nos respaldan -->
+    <!-- TODO: reemplazar los nombres por los logos en monocromo cuando las compañías autoricen su uso -->
+    <section class="partners" id="companias" aria-labelledby="partners-title">
+      <h2 id="partners-title" class="partners__title container" data-reveal>Te respaldan las aseguradoras más sólidas</h2>
+      <div class="marquee" data-reveal>
+        <ul class="marquee__track">
+          <li class="wordmark">Federación Patronal</li>
+          <li class="wordmark">Segurometal</li>
+          <li class="wordmark">San Cristóbal</li>
+          <li class="wordmark">Sancor Seguros</li>
+          <li class="wordmark" aria-hidden="true">Federación Patronal</li>
+          <li class="wordmark" aria-hidden="true">Segurometal</li>
+          <li class="wordmark" aria-hidden="true">San Cristóbal</li>
+          <li class="wordmark" aria-hidden="true">Sancor Seguros</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 8 · Preguntas frecuentes -->
+    <section class="section how" id="preguntas" aria-labelledby="faq-title">
+      <div class="container faq__layout">
+        <div class="faq__aside" data-reveal>
+          <h2 id="faq-title" class="t-h2">Preguntas frecuentes</h2>
+          <p class="t-lead">¿Te quedó alguna duda? Escribinos y te respondemos al toque.</p>
+          <a class="btn btn--whatsapp" data-wa="general" data-track="faq" href="https://wa.me/5492345478090">
+            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Escribinos por WhatsApp
+          </a>
+        </div>
+        <div class="accordion" data-stagger>
+          <div class="acc-item" data-open="true">
+            <h3><button class="acc-trigger" type="button">¿Desde cuándo estoy cubierto en el seguro agrícola?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
+            <div class="acc-panel" role="region"><div><p>Desde la emergencia del cultivo, es decir, desde que nacen las plantas, según las condiciones de la póliza.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-trigger" type="button">¿Qué necesito para cotizar?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
+            <div class="acc-panel" role="region"><div><p>Cultivo, hectáreas, ubicación de los lotes y fecha de siembra. Con eso arrancamos.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-trigger" type="button">¿Puedo asegurar fina y gruesa juntas?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
+            <div class="acc-panel" role="region"><div><p>Sí, con la cobertura de ciclo completo las tenés en una sola póliza.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-trigger" type="button">¿Qué hago si tengo un siniestro?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
+            <div class="acc-panel" role="region"><div><p>Escribinos apenas pase. Te guiamos con la denuncia y te acompañamos hasta el final.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-trigger" type="button">¿Tengo que ir a la oficina?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
+            <div class="acc-panel" role="region"><div><p>No. Todo se hace por WhatsApp y la póliza es digital. Si preferís, te esperamos en Sargento Cabral 276.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-trigger" type="button">¿Solo trabajan seguros de campo?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h3>
+            <div class="acc-panel" role="region"><div><p>No. También hogar, auto, moto, comercio, ART, transporte, vida y más.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 · Cierre y pie -->
+    <section class="closing on-brand-deep" id="contacto" aria-labelledby="closing-title">
+      <div class="closing__shapes" aria-hidden="true">
+        <span class="cshape cshape--o"></span>
+        <span class="cshape cshape--a"></span>
+        <span class="cshape cshape--q parallax-slow"></span>
+        <span class="cshape cshape--i"></span>
+      </div>
+      <div class="container closing__inner">
+        <h2 id="closing-title" class="closing__title" data-reveal>¿Lo resolvemos <span class="hl">hoy</span>?</h2>
+        <p class="t-lead" data-reveal>Escribinos y en minutos tenés tu cotización. Sin compromiso y sin letra chica.</p>
+        <div data-reveal>
+          <a class="btn btn--whatsapp" data-wa="general" data-track="cierre" href="https://wa.me/5492345478090">
+            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Escribinos por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <footer class="footer container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <svg class="logo" viewBox="0 0 1087 409" role="img" aria-label="ZOIA, asesores de seguros">
+              <polygon class="lz" points="0,0 280,0 195,148 280,148 280,280 0,280 85,131 0,131"/>
+              <circle class="lo" cx="452" cy="140" r="140"/>
+              <rect class="li" x="614" y="0" width="131" height="280"/>
+              <polygon class="la" points="765,280 925,0 1087,280"/>
+              <text class="lt" x="0" y="386" font-family="Montserrat, sans-serif" font-weight="500" font-size="100" textLength="1087" lengthAdjust="spacingAndGlyphs">asesores de seguros</text>
+            </svg>
+            <p>Seguros para familias, comercios, transportistas y productores de Norberto de la Riestra y la zona.</p>
+          </div>
+          <div>
+            <h3>Oficina</h3>
+            <ul>
+              <li><i class="ti ti-map-pin" aria-hidden="true"></i>Sargento Cabral 276, Norberto de la Riestra</li>
+              <li><i class="ti ti-clock" aria-hidden="true"></i>De 8 a 12:30 h</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contacto</h3>
+            <ul>
+              <li><i class="ti ti-brand-whatsapp" aria-hidden="true"></i><a data-wa="general" data-track="pie" href="https://wa.me/5492345478090">WhatsApp 24/7: +54 9 2345 47-8090</a></li>
+              <li><i class="ti ti-brand-instagram" aria-hidden="true"></i><a href="https://www.instagram.com/zoia.asesores/" target="_blank" rel="noopener">@zoia.asesores</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__legal">
+          <!-- TODO legal: número de matrícula y leyenda obligatoria de la SSN -->
+          <span>María Rosa Zoia, Productora Asesora de Seguros. Mat. SSN N.º [pendiente]. Leyenda SSN [pendiente].</span>
+          <span>© <span data-year>2026</span> ZOIA | Asesores de Seguros</span>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Botón flotante -->
+  <a class="btn btn--whatsapp fab" data-wa="float" data-track="flotante" href="https://wa.me/5492345478090" aria-label="Cotizá ahora por WhatsApp">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Cotizá ahora
+  </a>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

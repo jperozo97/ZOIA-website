@@ -1,0 +1,158 @@
+/* ==========================================================================
+   ZOIA · Design tokens
+   Fuente: brandbook "presentación - ZOIA - lite" (Fedes Consultora) y kit de
+   contexto del cliente. Documentado visualmente en /design-system.html
+   ========================================================================== */
+
+:root {
+  /* ---- Paleta de marca (no cambiar) ---- */
+  --zoia-petroleo: #024b5c;
+  --zoia-turquesa: #008ba7;
+  --zoia-amarillo: #eade83;
+  --zoia-menta: #c7f1df;
+  --zoia-blanco: #ffffff;
+
+  /* Escala derivada del petróleo (sombras, superficies oscuras) */
+  --petroleo-950: #011f27;
+  --petroleo-900: #012c36;
+  --petroleo-800: #023a47;
+  --petroleo-700: #024b5c;
+  --petroleo-600: #0b5f72;
+  --petroleo-100: #dcecef;
+  --petroleo-50: #f1f8f8;
+
+  --menta-50: #f2fbf7;
+  --menta-100: #e3f8ee;
+  --menta-200: #c7f1df;
+
+  --whatsapp: #25d366;
+  --whatsapp-ink: #073b1e;
+
+  /* ---- Tokens semánticos: modo claro ---- */
+  --bg: #f6faf9;
+  --surface: #ffffff;
+  --surface-soft: var(--menta-50);
+  --surface-tint: var(--menta-100);
+  --surface-brand: var(--zoia-petroleo);
+  --surface-brand-deep: var(--petroleo-900);
+  --ink: #0d2a31;
+  --ink-soft: #3c5a61;
+  --ink-mute: #5a747a;
+  --ink-on-brand: #f4fbf9;
+  --ink-on-brand-soft: #b9d6d6;
+  --line: rgb(2 75 92 / 0.12);
+  --line-strong: rgb(2 75 92 / 0.24);
+  --accent: var(--zoia-amarillo);
+  --accent-ink: var(--petroleo-900);
+  --interactive: var(--zoia-turquesa);
+  --interactive-strong: #00708a;
+  --focus: var(--zoia-turquesa);
+  --highlight: #8a7a12; /* palabra destacada sobre fondo claro (AA) */
+  --highlight-on-dark: var(--zoia-amarillo);
+  --shadow-color: 196 90% 14%;
+
+  /* ---- Tipografía ---- */
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --fs-xs: 0.8125rem;   /* 13 */
+  --fs-sm: 0.9375rem;   /* 15 */
+  --fs-base: 1.0625rem; /* 17 */
+  --fs-lg: 1.25rem;     /* 20 */
+  --fs-xl: clamp(1.375rem, 1.1rem + 0.9vw, 1.75rem);
+  --fs-2xl: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem);
+  --fs-3xl: clamp(2.125rem, 1.4rem + 2.9vw, 3.5rem);
+  --fs-display: clamp(2.375rem, 1.5rem + 3.6vw, 4.25rem);
+
+  --lh-tight: 1.05;
+  --lh-snug: 1.2;
+  --lh-body: 1.6;
+  --tracking-tight: -0.025em;
+  --tracking-display: -0.035em;
+  --tracking-label: 0.14em;
+
+  /* ---- Espaciado (base 4) ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --section-y: clamp(4.5rem, 3rem + 6vw, 8rem);
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+  --container: 1240px;
+  --measure: 62ch;
+
+  /* ---- Formas ----
+     Regla: botones = píldora; tarjetas y fotos = 24px; chips e íconos = 14px.
+     Las formas geométricas (cuarto de círculo, triángulo) salen del logo. */
+  --radius-sm: 14px;
+  --radius-md: 24px;
+  --radius-pill: 999px;
+
+  /* ---- Elevación (sombras teñidas de petróleo, nunca negras) ---- */
+  --shadow-1: 0 1px 2px hsl(var(--shadow-color) / 0.06), 0 2px 8px hsl(var(--shadow-color) / 0.05);
+  --shadow-2: 0 2px 4px hsl(var(--shadow-color) / 0.05), 0 12px 32px -8px hsl(var(--shadow-color) / 0.16);
+  --shadow-3: 0 4px 8px hsl(var(--shadow-color) / 0.06), 0 28px 60px -16px hsl(var(--shadow-color) / 0.28);
+
+  /* ---- Movimiento ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);       /* entradas */
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1); /* micro rebote en hover */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);   /* acordeones, cambios de estado */
+  --dur-fast: 180ms;
+  --dur-base: 320ms;
+  --dur-slow: 700ms;
+  --dur-reveal: 900ms;
+  --stagger: 80ms;
+
+  /* ---- Capas ---- */
+  --z-base: 1;
+  --z-float: 40;
+  --z-nav: 50;
+
+  color-scheme: light dark;
+}
+
+/* ---- Modo oscuro: la marca vive sobre petróleo profundo ---- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: var(--petroleo-950);
+    --surface: #04303a;
+    --surface-soft: var(--petroleo-900);
+    --surface-tint: #063a45;
+    --surface-brand: var(--petroleo-800);
+    --surface-brand-deep: #011920;
+    --ink: #eaf6f3;
+    --ink-soft: #b6d0cf;
+    --ink-mute: #8fb0b1;
+    --line: rgb(199 241 223 / 0.12);
+    --line-strong: rgb(199 241 223 / 0.24);
+    --interactive: #3fbcd3;
+    --interactive-strong: #6fd3e4;
+    --focus: var(--zoia-amarillo);
+    --highlight: var(--zoia-amarillo);
+    --shadow-color: 195 95% 3%;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: var(--petroleo-950);
+  --surface: #04303a;
+  --surface-soft: var(--petroleo-900);
+  --surface-tint: #063a45;
+  --surface-brand: var(--petroleo-800);
+  --surface-brand-deep: #011920;
+  --ink: #eaf6f3;
+  --ink-soft: #b6d0cf;
+  --ink-mute: #8fb0b1;
+  --line: rgb(199 241 223 / 0.12);
+  --line-strong: rgb(199 241 223 / 0.24);
+  --interactive: #3fbcd3;
+  --interactive-strong: #6fd3e4;
+  --focus: var(--zoia-amarillo);
+  --highlight: var(--zoia-amarillo);
+  --shadow-color: 195 95% 3%;
+}

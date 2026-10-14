@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZOIA · Design system web</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Estilos propios de la documentación (no se usan en la landing) */
+    .ds-hero { padding: 120px 0 72px; }
+    .ds-hero .logo { width: 180px; margin-bottom: var(--space-6); }
+    .ds-toc { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-6); }
+    .ds-toc a { padding: 8px 14px; border-radius: var(--radius-pill); text-decoration: none; font-size: var(--fs-sm); font-weight: 600; box-shadow: inset 0 0 0 1px rgb(199 241 223 / 0.35); }
+    .ds-toc a:hover { background: rgb(199 241 223 / 0.12); }
+    .ds-section { padding-block: var(--space-9); border-top: 1px solid var(--line); }
+    .ds-section h2 { margin-bottom: var(--space-3); }
+    .ds-section > .container > p.t-body { margin-bottom: var(--space-7); }
+    .ds-sub { font-size: var(--fs-lg); font-weight: 700; margin: var(--space-7) 0 var(--space-4); }
+    .swatches { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+    .swatch { border-radius: var(--radius-md); overflow: hidden; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); }
+    .swatch__chip { height: 120px; }
+    .swatch__meta { padding: var(--space-4); font-size: var(--fs-sm); }
+    .swatch__meta b { display: block; font-size: var(--fs-base); }
+    .swatch__meta code { font-size: var(--fs-xs); color: var(--ink-mute); }
+    .type-row { display: grid; grid-template-columns: 160px 1fr; gap: var(--space-5); align-items: baseline; padding: var(--space-5) 0; border-bottom: 1px solid var(--line); }
+    .type-row code, .tok code { font-size: var(--fs-xs); color: var(--ink-mute); }
+    .tok-grid { display: grid; gap: var(--space-3); }
+    .tok { display: grid; grid-template-columns: 160px 1fr; gap: var(--space-4); align-items: center; }
+    .tok__bar { height: 14px; border-radius: 4px; background: var(--zoia-turquesa); }
+    .radius-demo { display: flex; flex-wrap: wrap; gap: var(--space-5); }
+    .radius-demo div { width: 120px; height: 80px; background: var(--surface-tint); display: grid; place-items: center; font-size: var(--fs-xs); font-weight: 700; }
+    .shadow-demo { display: flex; flex-wrap: wrap; gap: var(--space-6); }
+    .shadow-demo div { width: 180px; height: 110px; border-radius: var(--radius-md); background: var(--surface); display: grid; place-items: center; font-size: var(--fs-sm); font-weight: 700; }
+    .demo-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); padding: var(--space-6); border-radius: var(--radius-md); background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); }
+    .demo-row.on-brand-deep { background: var(--surface-brand-deep); box-shadow: none; }
+    .motion-grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+    .motion-card { padding: var(--space-5); border-radius: var(--radius-md); background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); }
+    .motion-card .stage { height: 110px; display: grid; place-items: center; margin-bottom: var(--space-4); border-radius: var(--radius-sm); background: var(--surface-soft); overflow: hidden; }
+    .motion-card b { display: block; }
+    .motion-card p { font-size: var(--fs-sm); color: var(--ink-soft); }
+    .motion-card code { font-size: var(--fs-xs); color: var(--ink-mute); }
+    .ball { width: 46px; height: 46px; border-radius: 50%; background: var(--zoia-turquesa); }
+    .play .ball.ease-out { animation: ds-move 900ms var(--ease-out) both; }
+    .play .ball.ease-spring { animation: ds-move 900ms var(--ease-spring) both; }
+    .play .ball.ease-in-out { animation: ds-move 900ms var(--ease-in-out) both; }
+    @keyframes ds-move { from { transform: translateX(-80px); } to { transform: translateX(80px); } }
+    .shapes-row { display: flex; flex-wrap: wrap; gap: var(--space-6); align-items: end; }
+    .shapes-row figure { margin: 0; text-align: center; font-size: var(--fs-xs); color: var(--ink-mute); }
+    .shapes-row figure > div { width: 96px; height: 96px; margin-bottom: var(--space-2); }
+    .rules { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .rules > div { padding: var(--space-5); border-radius: var(--radius-md); background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); }
+    .rules h3 { display: flex; align-items: center; gap: var(--space-2); font-size: var(--fs-base); margin-bottom: var(--space-3); }
+    .rules ul { display: grid; gap: var(--space-2); font-size: var(--fs-sm); color: var(--ink-soft); }
+    .rules li { padding-left: 1.1em; position: relative; }
+    .rules li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: 0.5; }
+    .ok { color: #1c7c4a; } .no { color: #b3402f; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ok { color: #6fd39b; } :root:not([data-theme="light"]) .no { color: #f19a8b; } }
+    @media (max-width: 640px) { .type-row, .tok { grid-template-columns: 1fr; gap: var(--space-2); } }
+  </style>
+</head>
+<body>
+  <header class="ds-hero on-brand-deep">
+    <div class="container">
+      <svg class="logo" viewBox="0 0 1087 409" role="img" aria-label="ZOIA, asesores de seguros">
+        <polygon class="lz" points="0,0 280,0 195,148 280,148 280,280 0,280 85,131 0,131"/>
+        <circle class="lo" cx="452" cy="140" r="140"/>
+        <rect class="li" x="614" y="0" width="131" height="280"/>
+        <polygon class="la" points="765,280 925,0 1087,280"/>
+        <text class="lt" x="0" y="386" font-family="Montserrat, sans-serif" font-weight="500" font-size="100" textLength="1087" lengthAdjust="spacingAndGlyphs">asesores de seguros</text>
+      </svg>
+      <h1 class="t-display">Design system <span class="hl">web</span></h1>
+      <p class="t-lead" style="margin-top: var(--space-4)">Tokens, componentes y reglas de movimiento de la landing de ZOIA. Todo sale del brandbook de Fedes Consultora: petróleo de base, turquesa y menta de apoyo, una sola palabra en amarillo por titular y las cuatro formas del logo.</p>
+      <nav class="ds-toc" aria-label="Contenido">
+        <a href="#color">Color</a><a href="#tipografia">Tipografía</a><a href="#espaciado">Espaciado y formas</a><a href="#formas">Formas del logo</a><a href="#componentes">Componentes</a><a href="#movimiento">Movimiento</a><a href="#reglas">Reglas</a>
+        <a href="./">Ver la landing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="ds-section" id="color">
+      <div class="container">
+        <h2 class="t-h2">Color</h2>
+        <p class="t-body">Cuatro colores de marca y una escala de petróleo para superficies. Cada token semántico cambia en modo oscuro; los de marca no cambian nunca.</p>
+        <div class="swatches">
+          <div class="swatch"><div class="swatch__chip" style="background:#024b5c"></div><div class="swatch__meta"><b>Petróleo</b>#024B5C<br><code>--zoia-petroleo</code><br>Base institucional, texto sobre claro.</div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:#008ba7"></div><div class="swatch__meta"><b>Turquesa</b>#008BA7<br><code>--zoia-turquesa</code><br>Formas, detalles, foco y links.</div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:#c7f1df"></div><div class="swatch__meta"><b>Menta</b>#C7F1DF<br><code>--zoia-menta</code><br>Fondos suaves, la "O" del logo.</div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:#eade83"></div><div class="swatch__meta"><b>Amarillo pastel</b>#EADE83<br><code>--zoia-amarillo</code><br>Una palabra por titular y el CTA secundario.</div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:#25d366"></div><div class="swatch__meta"><b>Verde WhatsApp</b>#25D366<br><code>--whatsapp</code><br>Solo en botones que abren WhatsApp.</div></div>
+        </div>
+        <h3 class="ds-sub">Tokens semánticos</h3>
+        <div class="swatches">
+          <div class="swatch"><div class="swatch__chip" style="background:var(--bg)"></div><div class="swatch__meta"><b>Fondo de página</b><code>--bg</code></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--surface)"></div><div class="swatch__meta"><b>Superficie</b><code>--surface</code></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--surface-soft)"></div><div class="swatch__meta"><b>Superficie suave</b><code>--surface-soft</code></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--surface-brand)"></div><div class="swatch__meta"><b>Bloque de marca</b><code>--surface-brand</code></div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--surface-brand-deep)"></div><div class="swatch__meta"><b>Bloque profundo</b><code>--surface-brand-deep</code><br>Hero y cierre.</div></div>
+          <div class="swatch"><div class="swatch__chip" style="background:var(--ink)"></div><div class="swatch__meta"><b>Texto</b><code>--ink / --ink-soft / --ink-mute</code></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-section" id="tipografia">
+      <div class="container">
+        <h2 class="t-h2">Tipografía</h2>
+        <p class="t-body">La marca usa Mont. En la web usamos Montserrat (gratuita y muy parecida) hasta confirmar la licencia web de Mont. Jerarquía por peso y tamaño, nunca por color: el amarillo solo marca la palabra clave.</p>
+        <div class="type-row"><code>Display · 800<br>--fs-display</code><p class="t-display">Tu campaña, <span class="hl">protegida</span></p></div>
+        <div class="type-row"><code>H2 · 800<br>--fs-3xl</code><p class="t-h2">Asegurar tu campo, en 3 pasos</p></div>
+        <div class="type-row"><code>H3 · 700<br>--fs-xl</code><p class="t-h3">Cobertura desde emergencia</p></div>
+        <div class="type-row"><code>Lead · 400<br>--fs-lg</code><p class="t-lead">Cotización al instante, póliza en el día y 100% digital.</p></div>
+        <div class="type-row"><code>Cuerpo · 400<br>--fs-base</code><p class="t-body">Comparamos entre varias compañías y te explicamos qué cubre cada opción, en criollo.</p></div>
+        <div class="type-row"><code>Etiqueta · 700<br>--fs-xs</code><p class="t-label">Seguros agrícolas</p></div>
+        <h3 class="ds-sub">Palabra destacada</h3>
+        <div class="demo-row on-brand-deep"><p class="t-h2">¿Lo resolvemos <span class="hl">hoy</span>?</p></div>
+        <div class="demo-row" style="margin-top: var(--space-4)"><p class="t-h2 section-head is-in" style="margin:0">Además del campo, cuidamos todo lo que te <span class="hl">importa</span></p></div>
+        <p class="t-body" style="margin-top: var(--space-3)">Sobre oscuro la palabra va en amarillo. Sobre claro, el amarillo no tiene contraste: se usa como marcador detrás de la palabra, y se dibuja al entrar en pantalla.</p>
+      </div>
+    </section>
+
+    <section class="ds-section" id="espaciado">
+      <div class="container">
+        <h2 class="t-h2">Espaciado y formas</h2>
+        <p class="t-body">Escala base 4. Las secciones respiran con <code>--section-y</code> (72 a 128 px según pantalla).</p>
+        <div class="tok-grid">
+          <div class="tok"><code>--space-2 · 8px</code><div class="tok__bar" style="width:8px"></div></div>
+          <div class="tok"><code>--space-4 · 16px</code><div class="tok__bar" style="width:16px"></div></div>
+          <div class="tok"><code>--space-5 · 24px</code><div class="tok__bar" style="width:24px"></div></div>
+          <div class="tok"><code>--space-6 · 32px</code><div class="tok__bar" style="width:32px"></div></div>
+          <div class="tok"><code>--space-7 · 48px</code><div class="tok__bar" style="width:48px"></div></div>
+          <div class="tok"><code>--space-8 · 64px</code><div class="tok__bar" style="width:64px"></div></div>
+          <div class="tok"><code>--space-9 · 96px</code><div class="tok__bar" style="width:96px"></div></div>
+        </div>
+        <h3 class="ds-sub">Radios (una regla, sin excepciones)</h3>
+        <div class="radius-demo">
+          <div style="border-radius: var(--radius-pill)">Botones · píldora</div>
+          <div style="border-radius: var(--radius-md)">Tarjetas y fotos · 24</div>
+          <div style="border-radius: var(--radius-sm)">Íconos y chips · 14</div>
+        </div>
+        <h3 class="ds-sub">Elevación (sombras teñidas de petróleo)</h3>
+        <div class="shadow-demo">
+          <div style="box-shadow: var(--shadow-1)">--shadow-1</div>
+          <div style="box-shadow: var(--shadow-2)">--shadow-2 · hover</div>
+          <div style="box-shadow: var(--shadow-3)">--shadow-3 · foto hero</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-section" id="formas">
+      <div class="container">
+        <h2 class="t-h2">Formas del logo</h2>
+        <p class="t-body">Las letras de ZOIA son cuatro formas geométricas. Se usan como recursos gráficos: marcos de fotos, fondos de íconos y decoración del cierre. Siempre en colores de la paleta y planas, sin degradés.</p>
+        <div class="shapes-row">
+          <figure><div style="background:var(--zoia-amarillo);clip-path:polygon(0 0,100% 0,69.6% 52.8%,100% 52.8%,100% 100%,0 100%,30.4% 46.8%,0 46.8%)"></div>Z</figure>
+          <figure><div style="background:var(--zoia-menta);border-radius:50%"></div>O · círculo</figure>
+          <figure><div style="background:var(--zoia-amarillo);width:44px;border-radius:4px"></div>I · barra</figure>
+          <figure><div style="background:var(--zoia-amarillo);clip-path:polygon(50% 0,100% 100%,0 100%)"></div>A · triángulo</figure>
+          <figure><div style="background:var(--zoia-turquesa);border-radius:0 0 0 100%"></div>Cuarto de círculo</figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-section" id="componentes">
+      <div class="container">
+        <h2 class="t-h2">Componentes</h2>
+        <p class="t-body">Todos viven en <code>css/styles.css</code>. Cada botón de WhatsApp lleva <code>data-wa</code> con la clave del mensaje precargado y <code>data-track</code> con el nombre del evento de medición.</p>
+
+        <h3 class="ds-sub">Botones</h3>
+        <div class="demo-row">
+          <a class="btn btn--whatsapp" href="#componentes"><i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Cotizá por WhatsApp</a>
+          <a class="btn" href="#componentes"><i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Hablar con Rosa</a>
+          <a class="btn btn--dark" href="#componentes">Quiero cotizar mis lotes<i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn--sm btn--whatsapp" href="#componentes"><i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Escribinos</a>
+        </div>
+        <div class="demo-row on-brand-deep" style="margin-top: var(--space-4)">
+          <a class="btn btn--whatsapp" href="#componentes"><i class="ti ti-brand-whatsapp" aria-hidden="true"></i>Cotizá tu seguro agrícola</a>
+          <a class="btn btn--ghost" href="#componentes">Ver coberturas</a>
+        </div>
+        <p class="t-body" style="margin-top: var(--space-3)">Verde: abre WhatsApp. Amarillo: acción principal sobre petróleo. Petróleo: acción principal sobre claro. Fantasma: acción secundaria sobre oscuro. Hover: sube 2 px, brillo que cruza y flecha que avanza. Click: se hunde a 98%.</p>
+
+        <h3 class="ds-sub">Tarjetas de beneficio (bento)</h3>
+        <div class="bento" style="grid-template-rows:auto">
+          <article class="tile tile--mint"><span class="tile__icon" aria-hidden="true"><i class="ti ti-recycle"></i></span><h3 class="t-h3">tile--mint</h3><p>Beneficio secundario sobre menta.</p></article>
+          <article class="tile tile--brand"><span class="tile__icon" aria-hidden="true"><i class="ti ti-calendar-repeat"></i></span><h3 class="t-h3">tile--brand</h3><p>Contraste de marca dentro de una sección clara.</p></article>
+          <article class="tile tile--yellow"><span class="tile__corner" aria-hidden="true"></span><span class="tile__icon" aria-hidden="true"><i class="ti ti-discount"></i></span><h3 class="t-h3">tile--yellow</h3><p>Una sola por grilla: lo que más vende.</p></article>
+        </div>
+
+        <h3 class="ds-sub">Tarjeta de cobertura</h3>
+        <div class="lines__grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))">
+          <a class="line-card" href="#componentes"><span class="line-card__icon" aria-hidden="true"><i class="ti ti-home-shield"></i></span><h3 class="t-h3">Hogar</h3><p>Ícono en cuadrado de 14 px que gira y se pinta de amarillo al pasar el mouse.</p><span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span></a>
+          <a class="line-card" href="#componentes"><span class="line-card__icon" aria-hidden="true"><i class="ti ti-car"></i></span><h3 class="t-h3">Auto y moto</h3><p>Un círculo menta crece desde la esquina como respuesta al hover.</p><span class="link-arrow">Cotizar<i class="ti ti-arrow-right" aria-hidden="true"></i></span></a>
+        </div>
+
+        <h3 class="ds-sub">Acordeón</h3>
+        <div class="accordion">
+          <div class="acc-item" data-open="true">
+            <h4 style="margin:0"><button class="acc-trigger" type="button">¿Qué necesito para cotizar?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h4>
+            <div class="acc-panel" role="region"><div><p>El "+" gira a "×" con rebote y el panel se abre con <code>--ease-in-out</code>.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h4 style="margin:0"><button class="acc-trigger" type="button">¿Tengo que ir a la oficina?<span class="acc-icon" aria-hidden="true"><i class="ti ti-plus"></i></span></button></h4>
+            <div class="acc-panel" role="region"><div><p>No. Todo se hace por WhatsApp y la póliza es digital.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-section" id="movimiento">
+      <div class="container">
+        <h2 class="t-h2">Movimiento</h2>
+        <p class="t-body">Cada animación tiene un motivo: guiar la lectura (titular palabra por palabra, revelado al hacer scroll), dar respuesta a una acción (hover, click, acordeón) o contar una secuencia (los 3 pasos se encienden en orden). Solo se anima <code>transform</code> y <code>opacity</code>. Con "reducir movimiento" activado en el sistema, todo queda quieto.</p>
+        <div class="motion-grid">
+          <div class="motion-card"><div class="stage"><div class="ball ease-out"></div></div><b>Entrada</b><code>--ease-out · 700 a 900 ms</code><p>Revelados, titulares, fotos.</p></div>
+          <div class="motion-card"><div class="stage"><div class="ball ease-spring"></div></div><b>Rebote</b><code>--ease-spring · 320 ms</code><p>Hover de botones, íconos y formas.</p></div>
+          <div class="motion-card"><div class="stage"><div class="ball ease-in-out"></div></div><b>Cambio de estado</b><code>--ease-in-out · 520 ms</code><p>Acordeón, línea de los 3 pasos.</p></div>
+        </div>
+        <p style="margin-top: var(--space-5)"><button class="btn btn--dark btn--sm" type="button" id="replay"><i class="ti ti-player-play" aria-hidden="true"></i>Reproducir curvas</button></p>
+        <h3 class="ds-sub">Coreografía de la landing</h3>
+        <div class="rules">
+          <div><h3><i class="ti ti-sparkles" aria-hidden="true"></i>Al cargar</h3><ul><li>Las cuatro formas del logo se arman en secuencia.</li><li>El titular sube palabra por palabra; la palabra clave se enciende en amarillo al final.</li><li>La foto del hero hace un zoom lento de 112% a 100%.</li></ul></div>
+          <div><h3><i class="ti ti-arrows-down" aria-hidden="true"></i>Al hacer scroll</h3><ul><li>Bloques que suben 28 px y aparecen, escalonados de a 80 ms.</li><li>El marcador amarillo se dibuja bajo la palabra clave.</li><li>La línea de los 3 pasos se dibuja y cada número se enciende en orden.</li><li>Formas con parallax suave donde el navegador lo soporta.</li></ul></div>
+          <div><h3><i class="ti ti-hand-finger" aria-hidden="true"></i>Al interactuar</h3><ul><li>La barra superior se vuelve sólida al pasar el hero.</li><li>El botón flotante de WhatsApp entra con rebote y late 2 veces, una sola vez.</li><li>El marquee de compañías se pausa al pasar el mouse.</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-section" id="reglas">
+      <div class="container">
+        <h2 class="t-h2">Reglas</h2>
+        <p class="t-body">Lo que mantiene la marca consistente cuando se agreguen páginas o secciones.</p>
+        <div class="rules">
+          <div><h3 class="ok"><i class="ti ti-circle-check" aria-hidden="true"></i>Sí</h3><ul>
+            <li>Una sola palabra en amarillo por titular.</li>
+            <li>Voseo rioplatense, directo y sin letra chica.</li>
+            <li>Un botón de WhatsApp por sección, cada uno con su mensaje.</li>
+            <li>Fotos reales de campo, hogar y de Rosa.</li>
+            <li>Formas planas de la paleta, tomadas del logo.</li>
+          </ul></div>
+          <div><h3 class="no"><i class="ti ti-circle-x" aria-hidden="true"></i>No</h3><ul>
+            <li>Logo o nombre viejo "Zoia Seguros / ZS" ni plantillas de aseguradoras.</li>
+            <li>Amarillo como color de texto sobre fondo claro.</li>
+            <li>Prometer pagos o coberturas sin condiciones, ni publicar precios.</li>
+            <li>Formularios: la consulta va por WhatsApp.</li>
+            <li>Animaciones que no expliquen algo o loops infinitos en contenido.</li>
+          </ul></div>
+          <div><h3><i class="ti ti-alert-triangle" aria-hidden="true"></i>Pendiente antes de publicar</h3><ul>
+            <li>Número de matrícula y leyenda obligatoria de la SSN (bloque de Rosa y pie).</li>
+            <li>Foto real de Rosa para el bloque "No sos un número".</li>
+            <li>Autorización y logos de Federación Patronal, Segurometal, San Cristóbal y Sancor.</li>
+            <li>Licencia web de la tipografía Mont.</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js" defer></script>
+  <script>
+    document.getElementById("replay").addEventListener("click", () => {
+      const grid = document.querySelector(".motion-grid");
+      grid.classList.remove("play");
+      void grid.offsetWidth;
+      grid.classList.add("play");
+    });
+  </script>
+</body>
+</html>
