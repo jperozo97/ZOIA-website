@@ -4,7 +4,7 @@ Landing de una página para ZOIA, la productora asesora de seguros de María Ros
 
 Diseño: "Landing bento" del lienzo "ZOIA · Landing page" en Claude, con los tokens de "ZOIA · Sistema de diseño".
 
-Sitio estático (HTML, CSS y JS sin dependencias ni build), publicado con GitHub Pages en https://jperozo97.github.io/ZOIA-website/.
+Sitio estático (HTML, CSS y JS sin dependencias ni build), publicado en Vercel: https://zoia-asesores.vercel.app (proyecto `zoia-asesores`).
 
 ## Estructura
 
