@@ -294,8 +294,6 @@ button { font: inherit; color: inherit; }
 .venn__c--hogar { left: 90px; top: 0; background: var(--acento); justify-content: flex-end; padding: 40px 30px 0 0; }
 .venn__c--auto { left: 45px; top: 60px; background: var(--celeste); align-items: flex-end; justify-content: center; padding-bottom: 24px; }
 .venn__chip { position: absolute; left: 120px; top: 98px; translate: -50% -50%; background: var(--primario); color: var(--blanco); padding: 6px 10px; height: auto; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .venn__c { mix-blend-mode: normal; } }
-:root[data-theme="dark"] .venn__c { mix-blend-mode: normal; }
 
 .cob-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-bento); }
 .cob {

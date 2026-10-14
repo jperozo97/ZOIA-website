@@ -73,33 +73,6 @@
   --z-flotante: 30;
   --z-nav: 40;
 
-  color-scheme: light dark;
-}
-
-/* ---- Tema oscuro (tokens.json, tema "dark") ---- */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --fondo: #012e38;
-    --superficie: #0a3d49;
-    --superficie-alt: #012e38;
-    --tinta: #eef6f5;
-    --tinta-suave: #9cc2c9;
-    --linea: #1e5866;
-    --bloque-oscuro: #0b5c6e;
-    --icono: #6fd3e4;
-    --nav-fondo: rgb(1 46 56 / 0.86);
-    --sombra-color: 195 95% 3%;
-  }
-}
-:root[data-theme="dark"] {
-  --fondo: #012e38;
-  --superficie: #0a3d49;
-  --superficie-alt: #012e38;
-  --tinta: #eef6f5;
-  --tinta-suave: #9cc2c9;
-  --linea: #1e5866;
-  --bloque-oscuro: #0b5c6e;
-  --icono: #6fd3e4;
-  --nav-fondo: rgb(1 46 56 / 0.86);
-  --sombra-color: 195 95% 3%;
+  /* El diseño es solo claro: la web no cambia con el modo oscuro del sistema */
+  color-scheme: light;
 }

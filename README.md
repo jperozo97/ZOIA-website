@@ -13,7 +13,7 @@ Sitio estático (HTML, CSS y JS sin dependencias ni build), publicado con GitHub
 | `index.html` | La landing bento: hero, línea de la campaña, cómo cotizar, Rosa y por qué ZOIA, coberturas, preguntas, cierre y pie |
 | `agro/index.html` | Entrada del QR de la lona: redirige a `/?v=agro`, que muestra el hero agro |
 | `design-system.html` | Documentación visual del design system |
-| `css/tokens.css` | Tokens: colores, tipografía, espaciado, radios, sombras, movimiento, modo oscuro |
+| `css/tokens.css` | Tokens: colores, tipografía, espaciado, radios, sombras y movimiento (solo tema claro) |
 | `css/styles.css` | Componentes y animaciones |
 | `js/main.js` | Links de WhatsApp, revelado al hacer scroll, acordeón, barra y botón flotante |
 | `assets/` | Fotos y logos |
